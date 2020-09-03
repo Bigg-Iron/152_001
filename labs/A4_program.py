@@ -32,6 +32,7 @@ Lemonade ingredients for 16.0 servings
 8.0 cup(s) lemon juice
 8.0 cup(s) water
 8.0 cup(s) agave nectar 
+
 """
 
 # ---------------------------------------------------------------
@@ -50,16 +51,17 @@ def convertIngredients(lemon, water, sugar, servings, newServings):
 
 def getIngredients():
 	# obtain input for each of the ingredients
-    input('Enter amount of lemon juice in cup(s)? \n')
+    lemon = input('Enter amount of lemon juice in cup(s)? \n')
+    water = input('Enter amount of water in cup(s)? \n')
+    sugar = input('Enter amount of agave nectar in cup(s)? \n')
 	# obtain input for how many servings these ingredients would make
-    input('Enter amount of water in cup(s)? \n')
-    input('Enter amount of agave nectar in cup(s)? \n')
-    input('How many servings of Lemonade does this make? \n')
+    servings = input('How many servings of Lemonade does this make? \n')
+    return lemon, water, sugar, servings
 
 
 def printIngredients(lemon, water, sugar, servings):
 	# print the ingredients required for an amount of servings
-    print('Lemonade ingredients for 2.0 servings')
+    print('Lemonade ingredients for', float(servings), 'servings')
     print(lemon, water, sugar, servings)
 
 
