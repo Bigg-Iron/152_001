@@ -44,10 +44,10 @@ recipe = 'Lemonade'
 
 def convertIngredients(lemon, water, sugar, servings, newServings):
 	# obtain the number of servings required
-    lemon = int(lemon) / int(servings) * int(newServings)
-    water = int(water) / int(servings) * int(newServings)
-    sugar = int(sugar) / int(servings) * int(newServings)
-    servings = int(newServings)
+    lemon = float(lemon) / float(servings) * float(newServings)
+    water = float(water) / float(servings) * float(newServings)
+    sugar = float(sugar) / float(servings) * float(newServings)
+    servings = float(newServings)
 	# return the amount of each ingredient required for the new serving size
     print(recipe, 'ingredients for', newServings, 'servings \n')
     return lemon, water, sugar, servings
