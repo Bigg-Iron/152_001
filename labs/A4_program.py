@@ -49,7 +49,6 @@ def convertIngredients(lemon, water, sugar, servings, newServings):
     sugar = float(sugar) / float(servings) * float(newServings)
     servings = float(newServings)
 	# return the amount of each ingredient required for the new serving size
-    print(recipe, 'ingredients for', newServings, 'servings \n')
     return lemon, water, sugar, servings
 
 
