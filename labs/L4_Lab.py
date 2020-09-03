@@ -204,15 +204,29 @@ def getInput():
 
 
 # TODO: printColor()
-def printColor(param1):
-    # param1 = input('What is your favorite color? \n')
-    print('Favorite color is ', param1)
-# This function should take 1 parameter and return nothing.
 # It should print out the sentence "Favorite color is parameter" where parameter is the color passed to the function.
-printColor(input('what is your favorite color? \n'))
+# This function should take 1 parameter and return nothing.
+def printColor(param1):
+    print('Favorite color is ', param1)
+# printColor(input('what is your favorite color? \n'))
+
+
 
 # TODO: addNumbers()
+# This function should take 2 number parameters and return their sum.
+def addNumbers(num1, num2):
+    sum = int(num1) + int(num2)
+    print(num1, '+', num2, '=', sum)
+
+# addNumbers(input('num1: '), input('num2: '))
+
+
 
 # TODO: setGlobal()
+def setGlobal():
+    pass
+
 
 # TODO: main()
+def main():
+    pass
