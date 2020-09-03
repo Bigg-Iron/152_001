@@ -183,9 +183,36 @@ This function should take no parameters and return nothing. This function should
 """
  
 # TODO: getInput()
+def getInput():
+# This function should take no parameters and return the following four values read from user input in the order listed below.
+# Input a color.
+   color = input('Input a color.\n')
+# Input a number.
+   number1 =  input('Input a number.\n')
+# Input a second number.
+   number2 = input('Input a second number.\n')
+# Input a season.
+   season = input('Input a season.\n')
+# The prompts for these inputs can be whatever you like.
+   print('\n')
+   print('color:', color, '\n')
+   print('number 1:', number1, '\n')
+   print('number 2:', number2, '\n')
+   print('season:', season, '\n')
+
+# getInput()
+
 
 # TODO: printColor()
+def printColor(param1):
+    # param1 = input('What is your favorite color? \n')
+    print('Favorite color is ', param1)
+# This function should take 1 parameter and return nothing.
+# It should print out the sentence "Favorite color is parameter" where parameter is the color passed to the function.
+printColor(input('what is your favorite color? \n'))
 
 # TODO: addNumbers()
 
 # TODO: setGlobal()
+
+# TODO: main()
