@@ -45,7 +45,8 @@ recipe = 'Lemonade'
 def convertIngredients(lemon, water, sugar, servings, newServings):
     print('convertIngredients')
 	# obtain the number of servings required
-    # return servings
+    units = newServings
+    return units
 	# return the amount of each ingredient required for the new serving size
 
 
@@ -62,8 +63,10 @@ def getIngredients():
 def printIngredients(lemon, water, sugar, servings):
 	# print the ingredients required for an amount of servings
     print('Lemonade ingredients for', float(servings), 'servings')
-    print(lemon, water, sugar, servings)
-
+    print(float(lemon), units, 'lemon juice')
+    print(float(water), units, 'water')
+    print(float(sugar), units, 'agave nectar')
+    
 
 
 def main():
