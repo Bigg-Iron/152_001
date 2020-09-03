@@ -186,20 +186,23 @@ This function should take no parameters and return nothing. This function should
 def getInput():
 # This function should take no parameters and return the following four values read from user input in the order listed below.
 # Input a color.
-   color = input('Input a color.\n')
+    global color
+    color = input('Input a color.\n')
 # Input a number.
-   number1 =  input('Input a number.\n')
+    global number1
+    number1 =  input('Input a number.\n')
 # Input a second number.
-   number2 = input('Input a second number.\n')
+    global number2
+    number2 = input('Input a second number.\n')
 # Input a season.
-   season = input('Input a season.\n')
+    global season
+    season = input('Input a season.\n')
 # The prompts for these inputs can be whatever you like.
-   print('\n')
-   print('color:', color, '\n')
-   print('number 1:', number1, '\n')
-   print('number 2:', number2, '\n')
-   print('season:', season, '\n')
-
+    print('\n')
+    print('color:', color, '\n')
+    print('number 1:', number1, '\n')
+    print('number 2:', number2, '\n')
+    print('season:', season, '\n')
 # getInput()
 
 
@@ -207,7 +210,7 @@ def getInput():
 # It should print out the sentence "Favorite color is parameter" where parameter is the color passed to the function.
 # This function should take 1 parameter and return nothing.
 def printColor(param1):
-    print('Favorite color is ', param1)
+    print('Favorite color is', param1)
 # printColor(input('what is your favorite color? \n'))
 
 
@@ -223,10 +226,30 @@ def addNumbers(num1, num2):
 
 
 # TODO: setGlobal()
-def setGlobal():
-    pass
+# This function should take 1 parameter and return nothing. 
+# This function should set the global variable favoriteSeason to the value of the parameter.
+def setGlobal(season):
+    
+    print('global set to:', season)
+    
+# setGlobal(input('input: '))
+
 
 
 # TODO: main()
+# This function should take no parameters and return nothing. 
+# This function should first call getInput() and unpack the four resulting variables. 
+# It should then call printColor with the first unpacked value. 
+# Then call addNumbers with the float of the second and third unpacked value. 
+# Then call setGlobal with the fourth unpacked value.
 def main():
-    pass
+    getInput()
+    printColor(param1 = color)
+    addNumbers(number1, number2)
+    setGlobal(season)
+    
+    print('...')
+    
+    
+
+main()
