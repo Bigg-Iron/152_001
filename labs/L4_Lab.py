@@ -229,7 +229,7 @@ def addNumbers(num1, num2):
 # This function should take 1 parameter and return nothing. 
 # This function should set the global variable favoriteSeason to the value of the parameter.
 def setGlobal(favoriteSeason):
-    print('global set to:', favoriteSeason)
+    print('Favorite season set to:', favoriteSeason)
     
 
 
