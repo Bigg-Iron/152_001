@@ -195,14 +195,14 @@ def getInput():
     global number2
     number2 = input('Input a second number.\n')
 # Input a season.
-    global season
-    season = input('Input a season.\n')
+    global favoriteSeason
+    favoriteSeason = input('Input a season.\n')
 # The prompts for these inputs can be whatever you like.
     print('\n')
     print('color:', color, '\n')
     print('number 1:', number1, '\n')
     print('number 2:', number2, '\n')
-    print('season:', season, '\n')
+    print('season:', favoriteSeason, '\n')
 # getInput()
 
 
@@ -228,11 +228,9 @@ def addNumbers(num1, num2):
 # TODO: setGlobal()
 # This function should take 1 parameter and return nothing. 
 # This function should set the global variable favoriteSeason to the value of the parameter.
-def setGlobal(season):
+def setGlobal(favoriteSeason):
+    print('global set to:', favoriteSeason)
     
-    print('global set to:', season)
-    
-# setGlobal(input('input: '))
 
 
 
@@ -246,9 +244,8 @@ def main():
     getInput()
     printColor(param1 = color)
     addNumbers(number1, number2)
-    setGlobal(season)
+    setGlobal(favoriteSeason)
     
-    print('...')
     
     
 
