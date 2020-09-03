@@ -6,7 +6,8 @@ The main function is provided for you. You need to write the body of the other t
 The program is designed to give you some experience returning multiple values and working with global values.
 
 Sample input
-Here is a simple recipe with equal parts of each ingredient for 12 ounce servings that we need to scale up for a party.
+Here is a simple recipe with equal parts of each ingredient for 12 ounce servings that we need to scale up for a party:
+
 cup(s)
 1
 1
@@ -15,7 +16,8 @@ cup(s)
 16
 
 Sample Output
-Here is the expected output for the sample input. You program should produce this output exactly.
+Here is the expected output for the sample input. You program should produce this output exactly:
+
 What is the unit of measure?
 Enter amount of lemon juice in cup(s)?
 Enter amount of water in cup(s)?
@@ -29,8 +31,10 @@ How many servings would you like to make?
 Lemonade ingredients for 16.0 servings
 8.0 cup(s) lemon juice
 8.0 cup(s) water
-8.0 cup(s) agave nectar """
+8.0 cup(s) agave nectar 
+"""
 
+# ---------------------------------------------------------------
 
 # Unit conversions
 
@@ -38,17 +42,26 @@ recipe = 'Lemonade'
 
 
 def convertIngredients(lemon, water, sugar, servings, newServings):
+    print('convertIngredients')
 	# obtain the number of servings required
+    # return servings
 	# return the amount of each ingredient required for the new serving size
 
 
 def getIngredients():
 	# obtain input for each of the ingredients
+    input('Enter amount of lemon juice in cup(s)? \n')
 	# obtain input for how many servings these ingredients would make
+    input('Enter amount of water in cup(s)? \n')
+    input('Enter amount of agave nectar in cup(s)? \n')
+    input('How many servings of Lemonade does this make? \n')
 
 
 def printIngredients(lemon, water, sugar, servings):
 	# print the ingredients required for an amount of servings
+    print('Lemonade ingredients for 2.0 servings')
+    print(lemon, water, sugar, servings)
+
 
 
 def main():
