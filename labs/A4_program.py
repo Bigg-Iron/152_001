@@ -43,11 +43,15 @@ recipe = 'Lemonade'
 
 
 def convertIngredients(lemon, water, sugar, servings, newServings):
-    print('convertIngredients')
+    print('...')
 	# obtain the number of servings required
-    units = newServings
-    return units
+    lemon = int(lemon) * int(newServings)
+    water = int(water) * int(newServings)
+    sugar = int(sugar) * int(newServings)
+    servings = int(newServings)
 	# return the amount of each ingredient required for the new serving size
+    print(recipe, 'ingredients for', newServings, 'servings \n')
+    return lemon, water, sugar, servings
 
 
 def getIngredients():
