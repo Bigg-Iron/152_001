@@ -9,9 +9,11 @@ Sample output with input: 17
 """
 
 user_age = int(input())
-if ''' Your solution goes here ''':
+if user_age <= 18:
    print('18 or less')
 else:
    print('Over 18')
 
-   
+
+
+print('...')
