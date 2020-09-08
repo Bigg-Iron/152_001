@@ -185,7 +185,6 @@ Write an expression using Boolean operators that prints "Eligible" if user_age i
 
 Sample output with input: 17
 Ineligible
-"""
 
 user_age = int(input())
 
@@ -193,6 +192,24 @@ if user_age > 17 and user_age != 25:
     print('Eligible')
 else:
     print('Ineligible')
+"""
+
+
+
+""" 5.6.4: Boolean operators: Branching using Boolean variables.
+Write an expression that prints 'You must be rich!' if the variables young and famous are both True.
+
+Sample output with inputs: 'True' 'True'
+You must be rich! """
+
+
+young = (input() == 'True')
+famous = (input() == 'True')
+
+if young and famous:
+    print('You must be rich!')
+else:
+    print('There is always the lottery...')
 
 
 
