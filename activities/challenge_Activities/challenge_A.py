@@ -167,7 +167,6 @@ Write an expression using Boolean operators that prints "Special number" if spec
 
 Sample output with input: 17
 Not special number 
-"""
 
 
 special_num = int(input())
@@ -176,8 +175,24 @@ if special_num == -99 or special_num == 0 or special_num == 44:
     print('Special number')
 else:
     print('Not special number')
+"""
 
 
+
+""" 5.6.3: Boolean operators: Combining test conditions.
+
+Write an expression using Boolean operators that prints "Eligible" if user_age is greater than 17 and not equal to 25.
+
+Sample output with input: 17
+Ineligible
+"""
+
+user_age = int(input())
+
+if user_age > 17 and user_age != 25:
+    print('Eligible')
+else:
+    print('Ineligible')
 
 
 
