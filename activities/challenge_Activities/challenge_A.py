@@ -152,13 +152,33 @@ Write an expression that will print "in high school" if the value of user_grade 
 Sample output with input: 10
 in high school
 
- """
 
 user_grade = int(input())
 if 9 <= user_grade <= 12:
     print('in high school')
 else:
     print('not in high school')
+ """
+
+
+
+""" 5.6.2: Boolean operators: Detect specific values.
+Write an expression using Boolean operators that prints "Special number" if special_num is -99, 0, or 44.
+
+Sample output with input: 17
+Not special number 
+"""
+
+
+special_num = int(input())
+
+if special_num == -99 or special_num == 0 or special_num == 44:
+    print('Special number')
+else:
+    print('Not special number')
+
+
+
 
 
 
