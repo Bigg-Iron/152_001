@@ -1,5 +1,3 @@
-# Rock Paper Scissors Lizard Spock
-
 from random import choice,seed
 
 def computer_player():
@@ -9,7 +7,7 @@ def computer_player():
 
 def human_player():
     '''prompt and return a human selection from the 5 options.'''
-    humanPlayer_choice = str(input('choose your character: rock, paper, scissors, lizard, or spock \n'))
+    humanPlayer_choice = str(input('rock, paper, scissors, lizard, or spock?\n'))
     
     return(str(humanPlayer_choice))
     # pass
