@@ -17,8 +17,61 @@ def human_player():
 
 def outcome(player1, player2):
     '''return win, lose, or draw for the player1.'''
+    if player1 == 'lizard' and player2 == 'paper':
+        outcome = 'win'
+        return outcome
+
+        
+    elif player1 == 'lizard' and player2 == 'spock':
+        outcome = 'win'
+        return outcome
     
-    pass
+    # elif player2 == 'lizard' and player1 == 'spock':
+    #     outcome = 'lose'
+    #     return outcome
+        
+    elif player1 == 'paper' and player2 == 'rock':
+        outcome = 'win'
+        return outcome
+    
+    elif player1 == 'paper' and player2 == 'spock':
+        outcome = 'win'
+        return outcome
+        
+    elif player1 == 'rock' and player2 == 'lizard':
+        outcome = 'win'
+        return outcome
+        
+    elif player1 == 'rock' and player2 == 'scissors':
+        outcome = 'win'
+        return outcome
+        
+    elif player1 == 'scissors' and player2 == 'lizard':
+        outcome = 'win'
+        return outcome
+        
+    elif player1 == 'scissors' and player2 == 'paper':
+        outcome = 'win'
+        return outcome
+        
+    elif player1 == 'spock' and player2 == 'rock':
+        outcome = 'win'
+        return outcome
+        
+    elif player1 == 'spock' and player2 == 'scissors':
+        outcome = 'win'
+        return outcome
+        
+    elif player1 == player2:
+        outcome = 'draw'
+        return outcome
+    
+    else:
+        outcome = 'lose'
+        return outcome
+        
+    # return player1, player2
+    # pass
 
 
 def main():
