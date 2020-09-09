@@ -9,11 +9,15 @@ def computer_player():
 
 def human_player():
     '''prompt and return a human selection from the 5 options.'''
-    pass
+    humanPlayer_choice = str(input('choose your character: rock, paper, scissors, lizard, or spock \n'))
+    
+    return(str(humanPlayer_choice))
+    # pass
 
 
 def outcome(player1, player2):
     '''return win, lose, or draw for the player1.'''
+    
     pass
 
 

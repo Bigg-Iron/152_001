@@ -22,11 +22,11 @@ Prompt the user to input one of the five options: rock, paper, scissors, lizard,
 Determine the outcome (win, lose, or draw) from player1's perspective.
 Here are the specifications for the functions you will be writing:
 
-- human_player()
+- `human_player()`
   - Takes no parameters.
   - Prompts the user to input rock, paper, scissors, lizard, or spock?
   - Returns the user's selection as a string.
-- outcome(player1, player2)
+- `outcome(player1, player2)`
   - Takes two parameters, player1 and player2, both are strings
   - Determines the result of the game using if, elif, and/or else statements. There are several different ways to go about this, do whatever you feel is best.
   - Returns win, lose, or draw as a string
