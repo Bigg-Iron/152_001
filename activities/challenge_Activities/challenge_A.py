@@ -221,7 +221,6 @@ Write an expression using membership operators that prints "Special number" if s
 Sample output with input: 17
 Not special number
 
-"""
 
 special_list = [-99, 0, 44]
 special_num = int(input())
@@ -230,8 +229,25 @@ if special_num in special_list:
     print('Special number')
 else:
     print('Not special number')
+"""
 
 
+
+""" 5.9.2: Conditional expression: Print negative or non-negative.
+
+Create a conditional expression that evaluates to string "negative" if user_val is less than 0, and "non-negative" otherwise.
+
+Sample output with input: -9
+-9 is negative """
+
+
+user_val = int(input())
+
+cond_str = "negative" if user_val < 0 else "non-negative"
+
+print(user_val, 'is', cond_str)
+ 
+ 
 
 
 
