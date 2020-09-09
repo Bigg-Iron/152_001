@@ -200,7 +200,7 @@ else:
 Write an expression that prints 'You must be rich!' if the variables young and famous are both True.
 
 Sample output with inputs: 'True' 'True'
-You must be rich! """
+You must be rich! 
 
 
 young = (input() == 'True')
@@ -210,6 +210,28 @@ if young and famous:
     print('You must be rich!')
 else:
     print('There is always the lottery...')
+"""
+
+
+
+""" 5.7.2: Boolean operators: Detect specific values.
+
+Write an expression using membership operators that prints "Special number" if special_num is one of the special numbers stored in the list special_list = [-99, 0, or 44].
+
+Sample output with input: 17
+Not special number
+
+"""
+
+special_list = [-99, 0, 44]
+special_num = int(input())
+
+if special_num in special_list:
+    print('Special number')
+else:
+    print('Not special number')
+
+
 
 
 
