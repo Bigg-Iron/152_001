@@ -24,9 +24,6 @@ def outcome(player1, player2):
         outcome = 'win'
         return outcome
     
-    # elif player2 == 'lizard' and player1 == 'spock':
-    #     outcome = 'lose'
-    #     return outcome
         
     elif player1 == 'paper' and player2 == 'rock':
         outcome = 'win'
