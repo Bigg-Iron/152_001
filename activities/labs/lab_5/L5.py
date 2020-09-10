@@ -13,7 +13,7 @@ def computer_player():
 def human_player():
     '''prompt and return a human selection from the 3 options.'''
     choice = str(input("rock, paper, or scissors?\n"))
-    # return choice
+    return choice
     # pass
     
     
