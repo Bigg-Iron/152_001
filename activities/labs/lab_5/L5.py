@@ -12,12 +12,36 @@ def computer_player():
 
 def human_player():
     '''prompt and return a human selection from the 3 options.'''
-    pass
+    choice = str(input("rock, paper, or scissors?\n"))
+    # return choice
+    # pass
     
     
 def outcome(player1, player2):
     '''return win, lose, or draw for the player1.'''
-    pass
+    if player1 == 'rock' and player2 == 'scissors':
+        outcome = 'win'
+        return outcome
+
+        
+    elif player1 == 'paper' and player2 == 'rock':
+        outcome = 'win'
+        return outcome
+    # pass
+    
+    elif player1 == 'scissors' and player2 == 'paper':
+        outcome = 'win'
+        return outcome
+        # pass
+        
+    elif player1 == player2:
+        outcome = 'draw'
+        return outcome
+        # pass
+        
+    else:
+        outcome = 'lose'
+        return outcome
 
 
 def main():
