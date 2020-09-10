@@ -3,19 +3,6 @@
 Plan
 Today's lab covers conditional expressions and the if statement.
 
-Course Logistics Reminder
-ZyBooks is the primary learning tool for this class. All course material originates here; readings, labs, and assignments. To complete labs and programs in zyBooks, write code in the large Lab Activity box at the bottom of the page. Most assignments require inputs to run, which are entered in the smaller box below labeled Enter program input (optional). To run code, there are two options available, Develop mode and Submit mode:
-
-Develop mode is where code may be tested as many times as needed and is not graded.
-Submit mode is used when code is ready to be graded. Starting in chapter 5, there will only be 10 submission attempts available, so it is encouraged that code is thoroughly tested in develop mode before being submitted for grading.
-The purpose of the labs is to get guided programming practice. The skills taught in the labs will help develop practical experience on concepts discussed in readings and lectures. The content taught in labs will be used in assignments. Each mini-lab assignment will be graded.
-
-CS152 is a fast-paced course. It is only 8 weeks and there will be a substantial amount of work. That said, the class is not intended to make life difficult -- if you feel yourself falling behind please reach out to a TA or the professor as soon as possible. They are there to help you learn!
-
-Reading/Participation is due before class. Everything else is due at midnight the following day.
-
-For the following sections, run the example code yourself to see their outputs. Here is a blank program to paste the code snippets into.
-
 Boolean Operators
 The last lab covered operators used on floats and integers. This lab is going to look at operators on booleans. There are three boolean operators: not, and, and or.
 
