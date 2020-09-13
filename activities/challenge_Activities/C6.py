@@ -67,11 +67,47 @@ Sample output with input: 8
 8 16 32 64 '''
 
 
-num_insects = int(input()) # Must be >= 1
+# num_insects = int(input()) # Must be >= 1
 
-while num_insects > 0 and num_insects <= 100:
-    print(num_insects, end = ' ')
-    num_insects = num_insects * 2
+# while num_insects > 0 and num_insects <= 100:
+#     print(num_insects, end = ' ')
+#     num_insects = num_insects * 2
 
-    
 
+''' 
+6.4.2: While loop: Print 1 to N.
+Write a while loop that prints from 1 to user_num, increasing by 1 each time.
+
+Sample output with input: 4
+1
+2
+3
+4
+'''
+
+# i = 1
+
+# user_num = int(input()) # Assume positive
+
+# while i <= user_num:
+#     print(i)
+#     i += 1
+
+
+''' 6.4.3: Printing output using a counter.
+Retype and run, note incorrect behavior. Then fix errors in the code, which should print num_stars asterisks.
+while num_printed != num_stars:
+    print('*')
+Sample output with input: 3
+*
+*
+* '''
+
+num_printed = 0
+
+num_stars = int(input())
+
+
+while num_printed < num_stars:
+    print('*')
+    num_printed += 1
