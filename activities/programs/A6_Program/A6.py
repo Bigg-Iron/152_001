@@ -4,10 +4,12 @@ def average(grades):
     
 
 def maximum(grades):
-    pass
+    maximum = max(grades)
+    return(float(maximum))
 
 def minimum(grades):
-    pass
+    minimum = min(grades)
+    return(float(minimum))
 
 def print_grades(grades):
     print(*grades, sep = "\n")
