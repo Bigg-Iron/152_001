@@ -4,7 +4,7 @@ def average(grades):
     while(e < len(grades)):
         total = total + grades[e]
         e += 1
-    average = total / len(grades)
+    average = float(total / len(grades))
     return(float(average))
     
     
