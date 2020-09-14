@@ -4,14 +4,20 @@ def average(grades):
     while(e < len(grades)):
         total = total + grades[e]
         e += 1
-    # print(total)
     average = total / len(grades)
-    return(average)
+    return(float(average))
     
     
 
 def maximum(grades):
     maximum = grades[0]
+    x = 0
+    z = 0
+    while (x < len(grades)):
+        if grades[x] > maximum:
+            maximum = grades[x]
+        else:
+            x += 1
     return(float(maximum))
 
 
