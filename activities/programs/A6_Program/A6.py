@@ -11,7 +11,25 @@ def print_grades(grades):
     pass
 
 def get_grades():
-    pass
+    a = []
+    
+    while True:
+        n = float(input("Enter grade:\n"))
+        if n > 0:
+            a.append(n)
+        else:
+            # print(a)
+            print(*a, sep = "\n") 
+            break
+
+   
+        
+ 
+    
+        
+
+
+    
 
 def main():
     grades = get_grades()

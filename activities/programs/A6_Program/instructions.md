@@ -12,25 +12,25 @@ This assignment should use while loops to:
 
 **Here are the specifications for the functions you will be writing:**
 
-- get_grades()
+- `get_grades()`
   - Iterate with a while loop to put all positive user inputs into a list called grades until encountering a negative value
   - Return the list of grades
   
-- print_grades(grades)
+- `print_grades(grades)`
   - Takes one parameter, grades, as a list
   - Prints the grades each on a separate line. It should not print in list format.
 
-- average(grades)
+- `average(grades)`
   - Takes one parameter, grades, as a list
   - Calculates the average of all the values in grades. If grades is empty, average should be zero.
   - Return the average as a float
 
-- maximum(grades)
+- `maximum(grades)`
   - Takes one parameter, grades, as a list
   - Find the maximum grade in grades. If grades is empty, maximum should be zero.
   - Return the maximum grade as a float
 
-- minimum(grades)
+- `minimum(grades)`
   - Takes one parameter, grades, as a list
   - Finds the minimum grade in grades. If grades is empty, minimum should be zero.
   - Return the minimum grade as a float
