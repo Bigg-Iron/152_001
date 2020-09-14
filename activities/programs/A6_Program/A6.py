@@ -1,5 +1,7 @@
 def average(grades):
-    pass
+    average = sum(grades) / len(grades)
+    return(float(average))
+    
 
 def maximum(grades):
     pass
@@ -8,26 +10,30 @@ def minimum(grades):
     pass
 
 def print_grades(grades):
-    pass
+    print(*grades, sep = "\n")
+
+
+    
+
 
 def get_grades():
-    a = []
-    
+    g = []
     while True:
         n = float(input("Enter grade:\n"))
         if n > 0:
-            a.append(n)
+            g.append(n)
+
         else:
-            # print(a)
-            print(*a, sep = "\n") 
-            break
+            return g
+            
+
+
 
    
         
  
     
-        
-
+    
 
     
 
