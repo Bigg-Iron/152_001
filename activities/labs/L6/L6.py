@@ -11,6 +11,7 @@ def oddNumbers(N):
     pass
 
 
+
 def reverse(s):
     str = ''
     for i in s:
@@ -18,7 +19,7 @@ def reverse(s):
     return str
     # pass
 
-# FIXME: countInput()
+
 def countInput():
     g = []
     i = 0
@@ -38,6 +39,7 @@ def main():
     # countDown(9, 3)
     # print(reverse('Chicken'))
     # countInput()
+    something()
 
 # Do not modify the code below
 if __name__ == '__main__':

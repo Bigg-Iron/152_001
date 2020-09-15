@@ -1,4 +1,4 @@
-def average(grades): 
+def average(grades):
     total = 0
     e = 0
     while(e < len(grades)):
@@ -6,8 +6,7 @@ def average(grades):
         e += 1
     average = float(total / len(grades))
     return(float(average))
-    
-    
+
 
 def maximum(grades):
     maximum = grades[0]
@@ -17,9 +16,8 @@ def maximum(grades):
             maximum = grades[x]
         else:
             x += 1
-            
-    return(float(maximum))
 
+    return(float(maximum))
 
 
 def minimum(grades):
@@ -30,16 +28,12 @@ def minimum(grades):
             minimum = grades[z]
         else:
             z += 1
-            
+
     return(float(minimum))
 
 
-
 def print_grades(grades):
-    print(*grades, sep = "\n")
-
-
-    
+    print(*grades, sep="\n")
 
 
 def get_grades():
@@ -51,17 +45,7 @@ def get_grades():
 
         else:
             return g
-            
 
-
-
-   
-        
- 
-    
-    
-
-    
 
 def main():
     grades = get_grades()
@@ -70,6 +54,7 @@ def main():
     print("Average:", average(grades))
     print("Max:", maximum(grades))
     print("Min:", minimum(grades))
+
 
 if __name__ == '__main__':
     main()
