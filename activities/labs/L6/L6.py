@@ -6,7 +6,7 @@ def countDown(first, last):
     print('\n')
 
 
-# FIXME: oddNumbers(N)
+# FIXME: Returns 'none' after print?
 def oddNumbers(N):
     n = []
     i = 1
