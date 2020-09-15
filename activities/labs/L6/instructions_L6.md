@@ -6,7 +6,7 @@ This program consists of 5 functions that do different things and do not relate 
 
 - `countDown(first, last)`
   - Takes two parameters, first and last, both ints
-  - Counts down by one from the first number to the last. 
+  - Counts down by one from the first number to the last.
   - Each number is printed with a space after it instead of a newline.
   - The last statement of the function should be an empty print to print a newline.
 Example:
