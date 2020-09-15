@@ -20,14 +20,24 @@ def reverse(s):
 
 # FIXME: countInput()
 def countInput():
-    pass
+    g = []
+    i = 0
+    while True:
+        n = input('')
+        i += 1
+        if n != 'stop':
+            g.append(n)
+        else:
+            return print(i)
+    # pass
 
 
 # Write some tests here to see if your code works
 def main():
     
     # countDown(9, 3)
-    print(reverse('chicken'))
+    # print(reverse('Chicken'))
+    # countInput()
 
 # Do not modify the code below
 if __name__ == '__main__':
