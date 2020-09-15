@@ -15,12 +15,6 @@ def oddNumbers(N):
         n.append(i)
         i += 2
     print(n)
-         
-    
-    
-
-    
-    
 
 
 def reverse(s):
@@ -50,7 +44,8 @@ def main():
     # countDown(9, 3)
     # print(reverse('Chicken'))
     # countInput()
-    print(oddNumbers(8))
+    # print(oddNumbers(8))
+
 
     # Do not modify the code below
 if __name__ == '__main__':
