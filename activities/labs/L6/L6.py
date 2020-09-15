@@ -1,15 +1,26 @@
 def countDown(first, last):
     if first >= last:
         for i in range(first, last-1, -1):
-            print(i, end = ' ')
+            print(i, end=' ')
     # pass
     print('\n')
 
 
 # FIXME: oddNumbers(N)
 def oddNumbers(N):
-    pass
+    n = []
+    i = 1
 
+    while i < N:
+        n.append(i)
+        i += 2
+    print(n)
+         
+    
+    
+
+    
+    
 
 
 def reverse(s):
@@ -35,13 +46,12 @@ def countInput():
 
 # Write some tests here to see if your code works
 def main():
-    
+
     # countDown(9, 3)
     # print(reverse('Chicken'))
     # countInput()
-    something()
+    print(oddNumbers(8))
 
-# Do not modify the code below
+    # Do not modify the code below
 if __name__ == '__main__':
     main()
-    
