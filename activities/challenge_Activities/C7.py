@@ -34,16 +34,34 @@ s.reyn@email.com is Sue Reyn
 narty042@nmail.com is Nate Arty
 alf1@hmail.com is Alf '''
 
-contact_emails = {
-    'Sue Reyn' : 's.reyn@email.com',
-    'Mike Filt': 'mike.filt@bmail.com',
-    'Nate Arty': 'narty042@nmail.com'
-}
+# contact_emails = {
+#     'Sue Reyn' : 's.reyn@email.com',
+#     'Mike Filt': 'mike.filt@bmail.com',
+#     'Nate Arty': 'narty042@nmail.com'
+# }
 
-new_contact = input()
-new_email = input()
-contact_emails[new_contact] = new_email
+# new_contact = input()
+# new_email = input()
+# contact_emails[new_contact] = new_email
 
-''' Your solution goes here '''
-for contact in contact_emails:
-    print('{} is {}'.format(contact_emails[contact], contact))
+# ''' Your solution goes here '''
+# for contact in contact_emails:
+#     print('{} is {}'.format(contact_emails[contact], contact))
+
+
+
+''' 7.5.1: Nested loops: Print rectangle
+Given the number of rows and the number of columns, write nested loops to print a rectangle.
+
+Sample output with inputs: 2 3
+* * * 
+* * * 
+'''
+
+num_rows = int(input())
+num_cols = int(input())
+
+for i in range(num_rows):
+    for i in range(num_cols):
+        print('*', end=' ')
+    print()
