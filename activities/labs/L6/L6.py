@@ -14,7 +14,7 @@ def oddNumbers(N):
     while i <= N:
         n.append(i)
         i += 2
-    print(n)
+    return(n)
 
 
 
@@ -45,7 +45,7 @@ def main():
     # countDown(9, 3)
     # print(reverse('Chicken'))
     # countInput()
-    oddNumbers(8)
+    print(oddNumbers(8))
 
 
     # Do not modify the code below
