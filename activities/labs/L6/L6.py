@@ -6,15 +6,16 @@ def countDown(first, last):
     print('\n')
 
 
-# FIXME: Returns 'none' after print?
+
 def oddNumbers(N):
     n = []
     i = 1
 
-    while i < N:
+    while i <= N:
         n.append(i)
         i += 2
     print(n)
+
 
 
 def reverse(s):
@@ -44,7 +45,7 @@ def main():
     # countDown(9, 3)
     # print(reverse('Chicken'))
     # countInput()
-    # print(oddNumbers(8))
+    oddNumbers(8)
 
 
     # Do not modify the code below
