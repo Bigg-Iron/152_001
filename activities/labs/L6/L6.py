@@ -6,7 +6,6 @@ def countDown(first, last):
     print('\n')
 
 
-
 def oddNumbers(N):
     n = []
     i = 1
@@ -15,7 +14,6 @@ def oddNumbers(N):
         n.append(i)
         i += 2
     return(n)
-
 
 
 def reverse(s):
@@ -42,11 +40,10 @@ def countInput():
 # Write some tests here to see if your code works
 def main():
 
-    # countDown(9, 3)
-    # print(reverse('Chicken'))
+    countDown(9, 3)
+    print(reverse('Chicken'))
     countInput()
-    # print(oddNumbers(8))
-
+    print(oddNumbers(8))
 
     # Do not modify the code below
 if __name__ == '__main__':
