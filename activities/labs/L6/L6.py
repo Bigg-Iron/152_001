@@ -35,7 +35,7 @@ def countInput():
         if n != 'stop':
             g.append(n)
         else:
-            return print(i)
+            return i
     # pass
 
 
@@ -44,8 +44,8 @@ def main():
 
     # countDown(9, 3)
     # print(reverse('Chicken'))
-    # countInput()
-    print(oddNumbers(8))
+    countInput()
+    # print(oddNumbers(8))
 
 
     # Do not modify the code below
