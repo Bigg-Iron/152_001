@@ -1,26 +1,42 @@
 def average(grades):
     total = 0
+    grades = [0]
     e = 0
-    while(e < len(grades)):
-        total = total + grades[e]
-        e += 1
-    average = float(total / len(grades))
-    return(float(average))
+    if grades[0] <= 0:
+        average = 0
+        return(float(average))
+    elif grades:
+        while(e < len(grades)):
+            total = total + grades[e]
+            e += 1
+            average = float(total / len(grades))
+            return(float(average))
+            
+        
 
 
 def maximum(grades):
-    maximum = grades[0]
+    maximum = 0
     x = 0
+    grades = [0]
+    if len(grades) < 0:
+        maximum = 0
+        return maximum
     while (x < len(grades)):
-        if grades[x] > maximum:
+        if len(grades) < 0:
+            maximum = 0
+            return maximum
+        elif grades[x] > maximum:
             maximum = grades[x]
         else:
             x += 1
-
+   
     return(float(maximum))
 
 
+
 def minimum(grades):
+    grades = [0]
     minimum = grades[0]
     z = 0
     while (z < len(grades)):

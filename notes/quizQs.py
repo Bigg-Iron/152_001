@@ -50,3 +50,53 @@
 #         return i
 
 # print(f2('Colo State Uni'), f2('CSU'))
+
+
+# s = 0
+# for i in range(2, 10, 2):
+#   s += i
+
+# print(s)
+
+# s = 0
+# l = [5, 4, 3, 2, 1]
+# for (i, v) in enumerate(l):
+#   s += v - i
+
+# print(s)
+
+# s = 0
+# p = 1
+# l = [1, 5, 2, 4, 5, 3, 3, 2, 4, 1]
+# for v in sorted(l):
+#   if v == p:
+#     continue
+#   s += v
+#   p = v
+
+# print(s)
+
+
+# def f1(s):
+#     r = ''
+#     for c in reversed(s):
+#         if c == ' ':
+#             break
+#         r = r + c
+#     return r
+
+# print(f1('C S U'), f1('CSU'))
+
+# def f2(s):
+#     for (i, c) in enumerate(s):
+#         if c == " ":
+#             return i
+
+# print(f2('Colorado State '), f2 ('CSU'))
+
+# def f3(n,s):
+#     for v in range(n, 1, -1):
+#         print(v, end='.')
+#     print(s)
+
+# f3(3, 'wake up')
