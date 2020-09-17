@@ -64,12 +64,46 @@ ord('a') is 97. ord('b') is 98, and so on. chr(99) is 'c', etc.
 
 
 ''' 7.7.1: Loop Else Branches '''
-names = ['Janice', 'Clarice', 'Martin', 'Veronica', 'Jason']
+# names = ['Janice', 'Clarice', 'Martin', 'Veronica', 'Jason']
 
-num = int(input('Enter number of names to print: '))
-for i in range(len(names)):
-    if i == num:
-        break
-    print(names[i], end= ' ')
-else:
-    print('All names printed.')
+# num = int(input('Enter number of names to print: '))
+# for i in range(len(names)):
+#     if i == num:
+#         break
+#     print(names[i], end= ' ')
+# else:
+#     print('All names printed.')
+
+''' 7.8.1: User Defined Functions: 5 Ints '''
+size = 5
+
+def get_numbers(num):
+    numbers = []
+    user_input = input('Enter {} integers:\n'.format(num))
+
+    i = 0
+    for token in user_input.split():
+        number = int(token)     # Convert string input into integer
+        numbers.append(number)  # Add to numbers list
+
+        print(i, number)
+        i += 1
+
+    return numbers
+
+def print_all_numbers(numbers):
+    # Print numbers
+    print('Numbers:')
+
+def print_odd_numbers(numbers):
+    # Print all odd numbers
+    print('Odd numbers:')
+
+def print_negative_numbers(numbers):
+    # Print all negative numbers
+    print('Negative numbers:')
+
+nums = get_numbers(size)
+print_all_numbers(nums)
+print_odd_numbers(nums)
+print_negative_numbers(nums)

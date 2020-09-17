@@ -199,17 +199,43 @@ Define function print_popcorn_time() with parameter bag_ounces. If bag_ounces is
 Sample output with input: 7
 42 seconds '''
 
-def print_popcorn_time(bag_ounces):
-    if bag_ounces < 3:
-        print("Too small")
-    elif bag_ounces > 10:
-        print("Too large")
-    else:
-        s = (6 * bag_ounces)
-        print('{} seconds'.format(s))
+# def print_popcorn_time(bag_ounces):
+#     if bag_ounces < 3:
+#         print("Too small")
+#     elif bag_ounces > 10:
+#         print("Too large")
+#     else:
+#         s = (6 * bag_ounces)
+#         print('{} seconds'.format(s))
         
-''' Your solution goes here '''
+# ''' Your solution goes here '''
 
-user_ounces = int(input())
-print_popcorn_time(user_ounces)
+# user_ounces = int(input())
+# print_popcorn_time(user_ounces)
 
+
+''' 7.8.3: Function with loop: Shampoo.
+Write a function shampoo_instructions() with parameter num_cycles. If num_cycles is less than 1, print "Too few.". If more than 4, print "Too many.". Else, print "N : Lather and rinse." num_cycles times, where N is the cycle number, followed by "Done.".
+
+Sample output with input: 2
+1 : Lather and rinse.
+2 : Lather and rinse.
+Done.
+ 
+Hint: Define and use a loop variable. '''
+
+def shampoo_instructions(num_cycles):
+    i = 1
+    if num_cycles < 1:
+        print('Too few.')
+    elif num_cycles > 4:
+        print('Too many.')
+    else:
+        while i <= num_cycles:
+            print('{} : Lather and rinse.'.format(i))
+            i += 1
+        print('Done.')
+        
+
+user_cycles = int(input())
+shampoo_instructions(user_cycles)
