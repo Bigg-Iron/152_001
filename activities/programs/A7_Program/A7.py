@@ -20,7 +20,6 @@ def average(grades):
     return avg
 
 
-
 def maximum(grades):
     maximum = 0
     if grades[0] <= 0:
@@ -45,11 +44,9 @@ def minimum(grades):
         return minimum
 
 
-
 def print_grades(grades):
     for grade in grades:
         print(grade)
-    
 
 
 def main():
