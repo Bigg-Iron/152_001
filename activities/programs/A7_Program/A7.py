@@ -10,32 +10,46 @@ def get_grades():
 
 def average(grades):
     if grades[0] <= 0:
-        avg = 0
+        avg = float(0)
         return avg
-    
     else:
         total = 0
         for g in grades:
             total += g
-            avg = (total / len(grades))
+            avg = float((total / len(grades)))
     return avg
-    
-    # pass
+
 
 
 def maximum(grades):
-    pass
+    maximum = 0
+    if grades[0] <= 0:
+        maximum = float(0)
+        return maximum
+    else:
+        for grade in grades:
+            if grade > maximum:
+                maximum = grade
+        return maximum
 
 
 def minimum(grades):
-    pass
+    if grades[0] <= 0:
+        minimum = float(0)
+        return minimum
+    else:
+        minimum = grades[0]
+        for grade in grades:
+            if grade < minimum:
+                minimum = float(grade)
+        return minimum
+
 
 
 def print_grades(grades):
     for grade in grades:
         print(grade)
     
-    # pass
 
 
 def main():
