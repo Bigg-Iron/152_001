@@ -224,18 +224,20 @@ Done.
  
 Hint: Define and use a loop variable. '''
 
-def shampoo_instructions(num_cycles):
-    i = 1
-    if num_cycles < 1:
-        print('Too few.')
-    elif num_cycles > 4:
-        print('Too many.')
-    else:
-        while i <= num_cycles:
-            print('{} : Lather and rinse.'.format(i))
-            i += 1
-        print('Done.')
+# def shampoo_instructions(num_cycles):
+#     i = 1
+#     if num_cycles < 1:
+#         print('Too few.')
+#     elif num_cycles > 4:
+#         print('Too many.')
+#     else:
+#         while i <= num_cycles:
+#             print('{} : Lather and rinse.'.format(i))
+#             i += 1
+#         print('Done.')
         
 
-user_cycles = int(input())
-shampoo_instructions(user_cycles)
+# user_cycles = int(input())
+# shampoo_instructions(user_cycles)
+
+

@@ -27,8 +27,8 @@ Calculate and print the average, maximum value, and minimum value.
   - Takes one parameter, grades, as a list
   - Calculates the average of all the values in grades. If grades is empty, average should be zero.
   - Return the average as a float
-- `maximum(grades)`
 
+- `maximum(grades)`
   - Takes one parameter, grades, as a list
   - Find the maximum grade in grades. If grades is empty, maximum should be zero.
   - Return the maximum grade as a float
