@@ -1,15 +1,14 @@
 def get_grades():
     num_grades = int(input('How many grades:\n'))
     grades = []
-    while len(grades) < num_grades:
+    for grade in range(num_grades):
         s = float(input('Enter grade: '))
         grades.append(s)
     return grades
-    # pass
 
 
 def average(grades):
-    if grades[0] <= 0:
+    if len(grades) == 0:
         avg = float(0)
         return avg
     else:
@@ -22,7 +21,7 @@ def average(grades):
 
 def maximum(grades):
     maximum = 0
-    if grades[0] <= 0:
+    if len(grades) == 0:
         maximum = float(0)
         return maximum
     else:
@@ -33,7 +32,7 @@ def maximum(grades):
 
 
 def minimum(grades):
-    if grades[0] <= 0:
+    if len(grades) == 0:
         minimum = float(0)
         return minimum
     else:
