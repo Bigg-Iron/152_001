@@ -23,8 +23,12 @@ def every_other(start, end):
 
 
 def count(item, container):
-    pass
-
+    occurences = 0
+    # print(item, container)
+    for i in container:
+        if item == i:
+            occurences+=1
+    return occurences
 
 def compare_strings(string1, string2):
     pass
@@ -37,12 +41,13 @@ def print_grid(rows, cols):
 
 
 def main():
-    print(sum_list([2, 4, 5.5, 9, -10]))
-    print(every_other(1, 10))
-    print(every_other(4, 8))
-    print(every_other(8, 2))
-    print(count('a', 'banana'))
-    print(count(8, [4, 6, 8, 80, 2, 8]))
+    # print(sum_list([2, 4, 5.5, 9, -10]))
+    # print(every_other(1, 10))
+    # print(every_other(4, 8))
+    # print(every_other(8, 2))
+    # print(count('a', 'banana'))
+    # print(count(8, [4, 6, 8, 80, 2, 8]))
+    # print(count(1.2, {1.2:"a"}))
     print(compare_strings("Orange", "orange"))
     print(compare_strings("App", 'Application'))
     print_grid(4, 4)
