@@ -24,18 +24,38 @@ def every_other(start, end):
 
 def count(item, container):
     occurences = 0
-    # print(item, container)
     for i in container:
         if item == i:
             occurences+=1
     return occurences
 
+
+
 def compare_strings(string1, string2):
-    pass
+
+    for s in string1:
+        if s in string2:
+            continue
+        else:
+            if s not in string2:
+                return False
+        
+    return True
+        
+            
+    
+
+    
+
 
 
 def print_grid(rows, cols):
-    pass
+
+    for i in range(rows):
+        for i in range(cols):
+            print('#', end='')
+        print()
+
 
 # Test your code in main
 
@@ -49,9 +69,10 @@ def main():
     # print(count(8, [4, 6, 8, 80, 2, 8]))
     # print(count(1.2, {1.2:"a"}))
     print(compare_strings("Orange", "orange"))
-    print(compare_strings("App", 'Application'))
-    print_grid(4, 4)
-    print_grid(2, 8)
+    # print(compare_strings("App", 'Application'))
+    # print(compare_strings("diamond", "diamond"))
+    # print_grid(4, 4)
+    # print_grid(2, 8)
 
 
 # Do not change the code below

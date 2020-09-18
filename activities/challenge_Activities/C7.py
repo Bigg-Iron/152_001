@@ -58,13 +58,13 @@ Sample output with inputs: 2 3
 * * * 
 '''
 
-# num_rows = int(input())
-# num_cols = int(input())
+num_rows = int(input())
+num_cols = int(input())
 
-# for i in range(num_rows):
-#     for i in range(num_cols):
-#         print('*', end=' ')
-#     print()
+for i in range(num_rows):
+    for i in range(num_cols):
+        print('*', end=' ')
+    print()
 
 
 ''' 7.5.2: Nested loops: Print seats.
