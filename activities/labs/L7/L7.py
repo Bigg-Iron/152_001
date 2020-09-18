@@ -8,11 +8,30 @@ def sum_list(l):
             total += s
 
     return total
-    # pass
+
 
 
 def every_other(start, end):
-    pass
+    
+    list = [ ]
+    if start < end:
+        for item in range(start, end+1, 2 ):
+            if item <= end:
+                list.append(item)
+        return list
+    elif start > end:
+        return list
+
+
+
+
+        
+        
+
+    
+    
+   
+    
 
 
 def count(item, container):
@@ -30,8 +49,8 @@ def print_grid(rows, cols):
 
 
 def main():
-    print(sum_list([2, 4, 5.5, 9, -10]))
-    print(every_other(1, 10))
+    # print(sum_list([2, 4, 5.5, 9, -10]))
+    # print(every_other(1, 10))
     print(every_other(4, 8))
     print(count('a', 'banana'))
     print(count(8, [4, 6, 8, 80, 2, 8]))
