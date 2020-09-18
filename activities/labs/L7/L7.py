@@ -1,5 +1,14 @@
 def sum_list(l):
-    pass
+    if len(l) == 0:
+        total = float(0)
+        return total
+    else:
+        total = float(0)
+        for s in l:
+            total += s
+
+    return total
+    # pass
 
 
 def every_other(start, end):
