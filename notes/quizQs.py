@@ -100,3 +100,38 @@
 #     print(s)
 
 # f3(3, 'wake up')
+
+
+# /Users/lorenzor.bartolo/Desktop/FALL_20/CS_151_001/notes/testfile.txt
+
+# with open('/Users/lorenzor.bartolo/Desktop/FALL_20/CS_151_001/notes/testfile.txt') as r:
+#   with open('other', 'w') as w:
+#     o = ''
+#     for l in r:
+#       o = l + o
+#     w.write(o)
+
+# with open('other', 'r') as f:
+#   print(f.read())
+  
+# import csv
+# with open('/Users/lorenzor.bartolo/Desktop/FALL_20/CS_151_001/notes/a.csv') as f:
+#   rdr = csv.reader(f, delimiter=',')
+#   word = []
+#   i = 1
+#   for line in rdr:
+#     word.append(line[i % 2])
+#     i += 1
+
+# print(word)
+
+import csv
+with open('/Users/lorenzor.bartolo/Desktop/FALL_20/CS_151_001/notes/b.csv','r') as f:
+  rdr = csv.DictReader(f, delimiter=',')
+  word = []
+  i = 0
+  code = ["C","A","B","F","A"]
+  for line in rdr:
+    word.append(line[code[i]])
+    i += 1
+print(word)
