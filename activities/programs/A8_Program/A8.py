@@ -1,4 +1,6 @@
 # MadLibs from a file
+import sys
+import os
 
 def madlib_word(word):
     """Returns a substitution for a fill-in-the-blank or the original word."""
@@ -17,6 +19,8 @@ def madlib_line(text):
 
 def madlib_file(filename):
     """Reads the madlib file and returns the completed madlib as a list of strings."""
+    file_path = os.path.join('/Users/lorenzor.bartolo/Desktop/FALL_20/CS_151_001/activities/programs/A8_Program/', filename)
+    
     # process all the lines in the file and return a list of strings - hint use madlib_line
     return 
 
