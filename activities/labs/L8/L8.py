@@ -19,6 +19,14 @@ def writeListToFile(l, filename):
     pass
     
 def writeUserInfo(name, password, filename):
+    f = open('/Users/lorenzor.bartolo/Desktop/FALL_20/CS_151_001/activities/labs/L8/' + filename,"a")
+    
+    f.write('name=')
+    f.write(name)
+    f.write('\n')
+    f.write('password=')
+    f.write(password)
+    f.write('\n')
     pass
     
 def sumFile(filename):
