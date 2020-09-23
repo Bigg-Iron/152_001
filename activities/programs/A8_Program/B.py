@@ -20,15 +20,12 @@ def madlib_line(text):
     new_str = []
     words = text.split()  # try printing this to see what it does
     # process all the words in the line and return a string - hint use madlib_word
-    # print(words)
+    
     for word in words:
         new_str.append(madlib_word(word))
         
-    s = ' '
-    s = s.join(new_str)
-    print(s)
-
-    return
+    # madlib_print(new_str)
+    return madlib_print(new_str)
 
 
 def madlib_file(filename):
@@ -39,14 +36,17 @@ def madlib_file(filename):
     text = f.readlines()
     s = ''
     text = s.join(text)
-    print(text)
-    madlib_line(text)
-    return 
+    # print(text)
+    # madlib_line(text)
+    return madlib_line(text)
 
 
 def madlib_print(madlib):
     """Prints a completed MadLib, line by line."""
     # print the strings in the list
+    s = ' '
+    m = s.join(madlib)
+    print(m)
     return
 
 
