@@ -18,6 +18,7 @@ hello.txt now contains:
 
 Hello, World
 The world says hello back!
+
 printFile(filename)
 
 Takes the name of a file (filename)

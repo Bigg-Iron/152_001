@@ -1,4 +1,7 @@
 def writeToFile(string, filename):
+    
+    f = open('/Users/lorenzor.bartolo/Desktop/FALL_20/CS_151_001/activities/labs/L8/' + filename,"w") #opening file in write mode allows you to write something in the file
+    f.write(string)
     pass
 
 def printFile(filename):
