@@ -5,9 +5,17 @@ def writeToFile(string, filename):
     pass
 
 def printFile(filename):
+    f = open('/Users/lorenzor.bartolo/Desktop/FALL_20/CS_151_001/activities/labs/L8/' + filename,"r")
+    for line in f:
+        print(line)
     pass
 
 def writeListToFile(l, filename):
+    f = open('/Users/lorenzor.bartolo/Desktop/FALL_20/CS_151_001/activities/labs/L8/' + filename,"w")
+    
+    for word in l:
+        f.write(str(word))
+    
     pass
     
 def writeUserInfo(name, password, filename):

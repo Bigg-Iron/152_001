@@ -39,6 +39,7 @@ The output will be:
 2
 3
 4
+
 writeListToFile(a_list, filename)
 
 Takes a list of numbers (a_list), and the name of a file (filename)
