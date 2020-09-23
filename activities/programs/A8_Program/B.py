@@ -6,12 +6,12 @@ def madlib_word(word):
     
     if word[0] == "_" == word[-1]:
         replaced_word = input(word[1:-1].replace("_", " ")+'?\n')
-        print(replaced_word)
+        # print(replaced_word)
         return replaced_word
     
     else:
         
-        print(word)
+        # print(word)
         return word
 
 
@@ -20,15 +20,13 @@ def madlib_line(text):
     new_str = []
     words = text.split()  # try printing this to see what it does
     # process all the words in the line and return a string - hint use madlib_word
-    print(words)
+    # print(words)
     for word in words:
         new_str.append(madlib_word(word))
         
-        
-    print(new_str)
-            
-
-
+    s = ' '
+    s = s.join(new_str)
+    print(s)
 
     return
 
