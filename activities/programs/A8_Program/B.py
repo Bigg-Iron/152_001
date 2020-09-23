@@ -44,11 +44,13 @@ def madlib_file(filename):
 
 
 def madlib_print(madlib):
-    
     """Prints a completed MadLib, line by line."""
     # print the strings in the list
-    
-    print(madlib)
+    if madlib == None:
+        exit
+    else:
+        print(madlib)
+    return
 
 
 def main():
