@@ -85,6 +85,7 @@ sumFile("myfile.txt") will return 16, if myfile.txt contains:
 2
 3
 10
+
 nameInFile(user, filename)
 
 Takes a username (user) and the name of a file (filename)
