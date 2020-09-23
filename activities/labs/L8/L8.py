@@ -31,6 +31,7 @@ def writeUserInfo(name, password, filename):
     f.write('\n')
     pass
 
+# FIXME: sumFile(filename)
 def sumFile(filename):
     f = open('/Users/lorenzor.bartolo/Desktop/FALL_20/CS_151_001/activities/labs/L8/' + filename,"w+")
     s = [float()]
@@ -39,6 +40,7 @@ def sumFile(filename):
         s.append(line[:-1])
     print(s)
     pass
+    
     
 def nameInFile(user, filename):
     f = open('/Users/lorenzor.bartolo/Desktop/FALL_20/CS_151_001/activities/labs/L8/' + filename,"r")
