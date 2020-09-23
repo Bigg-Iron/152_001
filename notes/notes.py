@@ -70,32 +70,44 @@ Cost per diner: 64.25 """
 
 
 
-# FIXME: Write the split_check function. HINT: Calculate the amount of tip and tax,
-# add to the bill total, then divide by the number of diners.
-def split_check(bill, people, tax_percentage = 0.09, tip_percentage = 0.15):
+# # FIXME: Write the split_check function. HINT: Calculate the amount of tip and tax,
+# # add to the bill total, then divide by the number of diners.
+# def split_check(bill, people, tax_percentage = 0.09, tip_percentage = 0.15):
     
-    # print(bill, people, tax_percentage, tip_percentage)
-    subtotal = (bill * tax_percentage) + bill
-    total = (subtotal * tip_percentage) + subtotal
-    bill = total / people
-    return bill
+#     # print(bill, people, tax_percentage, tip_percentage)
+#     subtotal = (bill * tax_percentage) + bill
+#     total = (subtotal * tip_percentage) + subtotal
+#     bill = total / people
+#     return bill
 
-''' Your solution goes here '''
+# ''' Your solution goes here '''
 
-bill = float(input())
-people = int(input())
+# bill = float(input())
+# people = int(input())
 
-# Cost per diner at the default tax and tip percentages
-print('Cost per diner:', split_check(bill, people))
+# # Cost per diner at the default tax and tip percentages
+# print('Cost per diner:', split_check(bill, people))
 
-bill = float(input())
-people = int(input())
-new_tax_percentage = float(input())
-new_tip_percentage = float(input())
+# bill = float(input())
+# people = int(input())
+# new_tax_percentage = float(input())
+# new_tip_percentage = float(input())
 
-# Cost per diner at different tax and tip percentages
-print('Cost per diner:', split_check(bill, people, new_tax_percentage, new_tip_percentage))
+# # Cost per diner at different tax and tip percentages
+# print('Cost per diner:', split_check(bill, people, new_tax_percentage, new_tip_percentage))
 
 
 
-print('done')
+# print('done')
+
+
+x = 0
+y = 5
+z = 10
+while x < y:
+    if x == z:
+        print('x == z')
+        break
+    x += 1 
+else:
+    print('x == y')
