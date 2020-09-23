@@ -25,7 +25,9 @@ def madlib_line(text):
         new_str.append(madlib_word(word))
         
     # madlib_print(new_str)
-    return madlib_print(new_str)
+    s = ' '
+    m = s.join(new_str)
+    return madlib_print(m)
 
 
 def madlib_file(filename):
@@ -42,12 +44,11 @@ def madlib_file(filename):
 
 
 def madlib_print(madlib):
+    
     """Prints a completed MadLib, line by line."""
     # print the strings in the list
-    s = ' '
-    m = s.join(madlib)
-    print(m)
-    return
+    
+    print(madlib)
 
 
 def main():
