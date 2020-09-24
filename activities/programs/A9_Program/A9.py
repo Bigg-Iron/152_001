@@ -50,7 +50,13 @@ def triangles(filename):
     """
     Prints column headings and a line containing the properties of each triangle in the file.
     """
+    f = open('/Users/lorenzor.bartolo/Desktop/FALL_20/CS_151_001/activities/programs/A9_Program/' + filename, 'r')
     print(column_headings())
+    contents = f.readlines()
+    
+    contents = '{side_lengths:<8}{angle:>6}{triangle:>6}'
+
+    print(contents.format(side_lengths='111 222 333', angle='right', triangle='scal'))
     # add code to process the file, printing the triangle properties for each line in file
 
 

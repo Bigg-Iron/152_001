@@ -26,12 +26,17 @@ Each line in the file contains 3 numbers separated by spaces that represent the 
 
 5 4 3
 4 4 4
+
 Example Output
+
 The side lengths and properties should align with the column headings as in the following example. The side lengths should be right justified and in the same order as the input file, while the properties should be left justified.
 
+```python
 111 222 333 angle side
   5   4   3 right scal
   4   4   4 acute equi
+```
+
 Test Data File
 There is a single test file, triangles you may use to test your program during development.
 
