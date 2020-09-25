@@ -1,6 +1,6 @@
 def processFile(filename):
     # Open file
-    file = open(filename)
+    file = open('/Users/lorenzor.bartolo/Desktop/FALL_20/CS_151_001/activities/labs/L9/'+ filename, 'r')
     # Read line by line
     for line in file:
     # print the result of the call to processLine(line)
