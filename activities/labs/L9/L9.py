@@ -1,6 +1,6 @@
 def processFile(filename):
     # Open file
-    file = open('/Users/lorenzor.bartolo/Desktop/FALL_20/CS_151_001/activities/labs/L9/' + filename, 'r')
+    file = open(filename)
     # Read line by line
     for line in file:
     # print the result of the call to processLine(line)
@@ -43,7 +43,7 @@ def makeUserName(user_name):
     last_name = user_name[-1]
     # get characters 0->5 from last name
     # make those characters lowercase
-    l = last_name.lower()[0:5]
+    l = last_name.lower()[0:6]
     # return the two things above concatenated
     user_name = F + l
     return user_name
