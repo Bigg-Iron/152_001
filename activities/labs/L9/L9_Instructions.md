@@ -25,7 +25,7 @@ Example:
 
 processLine('FirstName,LastName:1830.20, 12904.1, -123.89, 594.014')
 
-# returns Username: Flastna - Account Balance: 15295.21
+ returns Username: Flastna - Account Balance: 15295.21
 
 makeUserName(user_name)
 Takes a string (user_name) that contains a first and last name separated by a comma. (First,Last).
@@ -35,7 +35,7 @@ Example:
 
 makeUserName('FirstName,LastName')
 
-# returns Flastna
+ returns Flastna
 
 getAmount(amounts)
 Takes a string (amounts) containing an unknown amount floating-point numbers separated by commas.
