@@ -25,7 +25,8 @@ def processLine(line):
     # Acount balance should formatted with 2 decimals left justified
     # return('Username: {name:>7} - Account Balance: {zero:<.2f}'.format(name,zero))
     # Hint use format string in dicsussed in 9.3. 
-    print('Username: {:>7} {:<.2f}'.format(user_name, total_amounts))
+    # print('Username: {user_name:>7} {total_amounts:<.2f}'.format(user_name, total_amounts))
+    return('Username: {:>7} - Account Balance: {:<.2f}'.format(user_name, total_amounts))
     # return(print('Username: {user_name:>7} - Account Balance: {total_amounts:<.2f}'.format(user_name, total_amounts)))
     pass
 
