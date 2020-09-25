@@ -3,7 +3,6 @@ def processFile(filename):
     file = open('/Users/lorenzor.bartolo/Desktop/FALL_20/CS_151_001/activities/labs/L9/' + filename, 'r')
     # Read line by line
     for line in file:
-        # print(line)
     # print the result of the call to processLine(line)
         print(processLine(line))
         
@@ -15,17 +14,19 @@ def processLine(line):
     n = line.split(':')
     name = n[0].split(',')
     # call makeUsername with list item containing string of first and last name
-    makeUserName(name)
+    user_name = makeUserName(name)
     
     # call getAmount with list item containing the string holding amounts
     amounts = line.split(':')[-1]
-    getAmount(amounts)
+    total_amounts = getAmount(amounts)
     
     # return the formatted string 'Username: name - Account Balance: 000000.00'
     # Username should be formatted with 7 characters right justified
     # Acount balance should formatted with 2 decimals left justified
     # return('Username: {name:>7} - Account Balance: {zero:<.2f}'.format(name,zero))
     # Hint use format string in dicsussed in 9.3. 
+    print('Username: {:>7} {:<.2f}'.format(user_name, total_amounts))
+    # return(print('Username: {user_name:>7} - Account Balance: {total_amounts:<.2f}'.format(user_name, total_amounts)))
     pass
 
 def makeUserName(user_name):
@@ -43,8 +44,8 @@ def makeUserName(user_name):
     # make those characters lowercase
     l = last_name.lower()[0:5]
     # return the two things above concatenated
-    print(F + l)
-    return F + l 
+    user_name = F + l
+    return user_name
     pass
 
 def getAmount(amounts):
@@ -55,9 +56,9 @@ def getAmount(amounts):
     for amount in amounts_Split:
         amounts.append(float(amount))
     # add the floating point values together
-    print(sum(amounts))
-    
-    
+    total_amount = sum(amounts)
+    # print(amounts)
+    return total_amount
     pass
 
 def main():
