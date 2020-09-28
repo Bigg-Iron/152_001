@@ -4,13 +4,13 @@ Modify short_names by deleting the first element and changing the last element t
 Sample output with input: 'Gertrude Sam Ann Joseph'
 ['Sam', 'Ann', 'Joe'] """
 
-# user_input = input()
-# short_names = user_input.split()
+user_input = input()
+short_names = user_input.split()
 
-# short_names = short_names.pop(0)
-# short_names[2] = 'Joe'
+short_names = short_names.pop(0)
+short_names[2] = 'Joe'
 
-# print(short_names)
+print(short_names)
 
 # Expected output: ['Sam', 'Ann', 'Joe']
 
