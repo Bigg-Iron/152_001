@@ -35,11 +35,32 @@ Write a loop to populate the list user_guesses with a number of guesses. The var
 Sample output with input: '3 9 5 2'
 user_guesses: [9, 5, 2] """
 
-num_guesses = int(input())
-user_guesses = []
+# num_guesses = int(input())
+# user_guesses = []
+
+# ''' Your solution goes here '''
+# for index in range(num_guesses):
+#     user_guesses.append(int(input()))
+    
+# print('user_guesses:', user_guesses)
+
+
+"""10.3.2: Sum extra credit.
+Assign sum_extra with the total extra credit received given list test_grades. Full credit is 100, so anything over 100 is extra credit. For the given program, sum_extra is 8 because 1 + 0 + 7 + 0 is 8.
+
+Sample output for the given program with input: '101 83 107 90'
+Sum extra: 8"""
+
+user_input = input()
+test_grades = list(map(int, user_input.split())) # contains test scores
+
+sum_extra = -999 # Initialize 0 before your loop
 
 ''' Your solution goes here '''
-for index in range(num_guesses):
-    user_guesses.append(int(input()))
-    
-print('user_guesses:', user_guesses)
+sum_extra = 0
+for grade in test_grades:
+    if (grade > 100):
+       sum_extra += grade - 100 
+
+print('Sum extra:', sum_extra)
+
