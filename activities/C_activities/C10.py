@@ -51,16 +51,33 @@ Assign sum_extra with the total extra credit received given list test_grades. Fu
 Sample output for the given program with input: '101 83 107 90'
 Sum extra: 8"""
 
-user_input = input()
-test_grades = list(map(int, user_input.split())) # contains test scores
+# user_input = input()
+# test_grades = list(map(int, user_input.split())) # contains test scores
 
-sum_extra = -999 # Initialize 0 before your loop
+# sum_extra = -999 # Initialize 0 before your loop
+
+# ''' Your solution goes here '''
+# sum_extra = 0
+# for grade in test_grades:
+#     if (grade > 100):
+#        sum_extra += grade - 100 
+
+# print('Sum extra:', sum_extra)
+
+"""10.3.3: Hourly temperature reporting.
+Write a loop to print all elements in hourly_temperature. Separate elements with a -> surrounded by spaces.
+
+Sample output for the given program with input: '90 92 94 95'
+90 -> 92 -> 94 -> 95 
+Note: 95 is followed by a space, then a newline. """
+
+user_input = input()
+hourly_temperature = user_input.split()
 
 ''' Your solution goes here '''
-sum_extra = 0
-for grade in test_grades:
-    if (grade > 100):
-       sum_extra += grade - 100 
-
-print('Sum extra:', sum_extra)
-
+for temp in hourly_temperature:
+    if temp == hourly_temperature[-1]:
+        print(temp, '')
+    else:
+        print(temp, end=' -> ')
+    
