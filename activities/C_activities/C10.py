@@ -71,13 +71,33 @@ Sample output for the given program with input: '90 92 94 95'
 90 -> 92 -> 94 -> 95 
 Note: 95 is followed by a space, then a newline. """
 
-user_input = input()
-hourly_temperature = user_input.split()
+# user_input = input()
+# hourly_temperature = user_input.split()
+
+# ''' Your solution goes here '''
+# for temp in hourly_temperature:
+#     if temp == hourly_temperature[-1]:
+#         print(temp, '')
+#     else:
+#         print(temp, end=' -> ')
+    
+"""10.5.1: Print multiplication table.
+Print the two-dimensional list mult_table by row and column. Hint: Use nested loops.
+
+Sample output with input: '1 2 3,2 4 6,3 6 9':
+1 | 2 | 3
+2 | 4 | 6
+3 | 6 | 9  """
+
+user_input= input()
+lines = user_input.split(',')
+
+# This line uses a construct called a list comprehension, introduced elsewhere,
+# to convert the input string into a two-dimensional list.
+# Ex: 1 2, 2 4 is converted to [ [1, 2], [2, 4] ]
+
+mult_table = [[int(num) for num in line.split()] for line in lines]
 
 ''' Your solution goes here '''
-for temp in hourly_temperature:
-    if temp == hourly_temperature[-1]:
-        print(temp, '')
-    else:
-        print(temp, end=' -> ')
-    
+
+
