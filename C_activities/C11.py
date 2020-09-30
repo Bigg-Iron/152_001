@@ -133,23 +133,43 @@ Togo deleted? No. """
 # print(airport_codes.get('Seattle', 'na'))
 
 
-airport_codes = {
-    'Dallas': 'DAL',
-    'San Jose': 'SJC',
-    'Los Angeles': 'LAX',
-    'Chicago': 'ORD',
-    'Tokyo': 'NRT'
-}
+# airport_codes = {
+#     'Dallas': 'DAL',
+#     'San Jose': 'SJC',
+#     'Los Angeles': 'LAX',
+#     'Chicago': 'ORD',
+#     'Tokyo': 'NRT'
+# }
 
-new_airport_codes = {
-    'Tokyo': 'HND',
-    'Minneapolis': 'MSP',
-    'Amsterdam': 'AMS'
-}
+# new_airport_codes = {
+#     'Tokyo': 'HND',
+#     'Minneapolis': 'MSP',
+#     'Amsterdam': 'AMS'
+# }
 
-print(airport_codes.get('Minneapolis', 'na'))
-print(airport_codes.get('Tokyo', 'na'))
-airport_codes.update(new_airport_codes)
-print(airport_codes.get('Minneapolis', 'na'))
-print(airport_codes.get('Tokyo', 'na'))
+# print(airport_codes.get('Minneapolis', 'na'))
+# print(airport_codes.get('Tokyo', 'na'))
+# airport_codes.update(new_airport_codes)
+# print(airport_codes.get('Minneapolis', 'na'))
+# print(airport_codes.get('Tokyo', 'na'))
+
+
+""" 11.3.1: Report country population.
+Write a loop that prints each country's population in country_pop.
+
+Sample output with input:
+'China:1365830000,India:1247220000,United States:318463000,Indonesia:252164800':
+United States has 318463000 people.
+India has 1247220000 people.
+Indonesia has 252164800 people.
+China has 1365830000 people. """
+
+user_input = input()
+entries = user_input.split(',')
+country_pop = dict(pair.split(':') for pair in entries)
+# country_pop is now a dictionary, Ex: { 'Germany':'82790000', 'France':'67190000' }
+
+''' Your solution goes here '''
+for country, pop in country_pop.items():
+        print(country, 'has', pop, 'people.')
 
