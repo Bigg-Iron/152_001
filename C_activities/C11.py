@@ -65,20 +65,91 @@ Togo deleted? No. """
 
 
 # "New" means new compared to previous level
-provincial_capitals = {
-    'Nunavut': 'Iqaluit',
-    'Alberta': 'Edmonton',
-    'Yukon': 'Whitehorse',
-    'Ontario': 'Toronto'
+# provincial_capitals = {
+#     'Nunavut': 'Iqaluit',
+#     'Alberta': 'Edmonton',
+#     'Yukon': 'Whitehorse',
+#     'Ontario': 'Toronto'
+# }
+
+# province_name = input()
+# while province_name != 'exit':
+#     if province_name in provincial_capitals:
+#         print(provincial_capitals[province_name])
+#         del provincial_capitals[province_name] # New line
+#     else:
+#         print('x')
+#     province_name = input()
+    
+    
+"""11.2.1: Enter the output of dictionary methods. """
+
+# airport_codes = {
+#     'Seattle': 'SEA',
+#     'Atlanta': 'ATL',
+#     'Chicago': 'ORD',
+#     'San Jose': 'SJC',
+#     'London': 'LHR'
+# }
+
+# print(airport_codes.get('Atlanta', 'na'))
+# print(airport_codes.get('Paris', 'na'))
+# print(airport_codes.get('Washington', 'na'))	
+
+
+# airport_codes = {
+#     'San Jose': 'SJC',
+#     'Atlanta': 'ATL',
+#     'Washington': 'IAD',
+#     'New York': 'JFK',
+#     'Vancouver': 'YVR'
+# }
+
+# print(airport_codes.get('Washington', 'na'))
+# print(airport_codes.pop('Washington', 'na'))
+# print(airport_codes.get('Washington', 'na'))
+
+
+# airport_codes = {
+#     'Dallas': 'DAL',
+#     'Vancouver': 'YVR',
+#     'Washington': 'IAD',
+#     'Seattle': 'SEA',
+#     'Houston': 'IAH'
+# }
+
+# new_airport_codes = {
+#     'San Jose': 'SJC',
+#     'New York': 'JFK',
+#     'London': 'LHR'
+# }
+
+# print(airport_codes.get('London', 'na'))
+# print(airport_codes.get('Paris', 'na'))
+# print(airport_codes.get('Seattle', 'na'))
+# airport_codes.update(new_airport_codes)
+# print(airport_codes.get('London', 'na'))
+# print(airport_codes.get('Paris', 'na'))
+# print(airport_codes.get('Seattle', 'na'))
+
+
+airport_codes = {
+    'Dallas': 'DAL',
+    'San Jose': 'SJC',
+    'Los Angeles': 'LAX',
+    'Chicago': 'ORD',
+    'Tokyo': 'NRT'
 }
 
-province_name = input()
-while province_name != 'exit':
-    if province_name in provincial_capitals:
-        print(provincial_capitals[province_name])
-        del provincial_capitals[province_name] # New line
-    else:
-        print('x')
-    province_name = input()
-    
-    
+new_airport_codes = {
+    'Tokyo': 'HND',
+    'Minneapolis': 'MSP',
+    'Amsterdam': 'AMS'
+}
+
+print(airport_codes.get('Minneapolis', 'na'))
+print(airport_codes.get('Tokyo', 'na'))
+airport_codes.update(new_airport_codes)
+print(airport_codes.get('Minneapolis', 'na'))
+print(airport_codes.get('Tokyo', 'na'))
+
