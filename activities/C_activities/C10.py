@@ -99,5 +99,5 @@ lines = user_input.split(',')
 mult_table = [[int(num) for num in line.split()] for line in lines]
 
 ''' Your solution goes here '''
-
+print(mult_table)
 
