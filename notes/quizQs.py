@@ -125,13 +125,13 @@
 
 # print(word)
 
-import csv
-with open('/Users/lorenzor.bartolo/Desktop/FALL_20/CS_151_001/notes/b.csv','r') as f:
-  rdr = csv.DictReader(f, delimiter=',')
-  word = []
-  i = 0
-  code = ["C","A","B","F","A"]
-  for line in rdr:
-    word.append(line[code[i]])
-    i += 1
-print(word)
+# import csv
+# with open('/Users/lorenzor.bartolo/Desktop/FALL_20/CS_151_001/notes/b.csv','r') as f:
+#   rdr = csv.DictReader(f, delimiter=',')
+#   word = []
+#   i = 0
+#   code = ["C","A","B","F","A"]
+#   for line in rdr:
+#     word.append(line[code[i]])
+#     i += 1
+# print(word)
