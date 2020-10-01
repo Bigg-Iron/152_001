@@ -11,14 +11,15 @@ def readLettersFromFile(filename):
                     li.append(char)
                 else:
                    continue 
-                # print(li)
     return li
 
 
 def countLetters(lettersFromFile):
     """Return dictionary of key:value pairs (letter,# times letter appears in file)"""
+    l = lettersFromFile
+    tally = dict((x,l.count(x)) for x in set(l))
     
-    return {}
+    return tally
     
 def sortByCount(count):
     """Return list of tuples (value,key), sorted by value"""
