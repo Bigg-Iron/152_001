@@ -13,7 +13,6 @@ def readLettersFromFile(filename):
                    continue 
     return li
 
-
 def countLetters(lettersFromFile):
     """Return dictionary of key:value pairs (letter,# times letter appears in file)"""
     l = lettersFromFile
@@ -22,7 +21,8 @@ def countLetters(lettersFromFile):
     
 def sortByCount(count):
     """Return list of tuples (value,key), sorted by value"""
-    return []
+    new_tuple = list(count.items())
+    return new_tuple
         
 def main():
     """DO NOT CHANGE THIS"""
