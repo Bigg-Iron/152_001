@@ -51,10 +51,3 @@ sample.txt
 letters1
 letters2
 letters3
-
-```python
-
-EXPECTED OUTPUT for letters1:
-Sorted: [(1, 'D'), (1, 'H'), (1, 'I'), (1, 'K'), (1, 'L'), (1, 'O'), (3, 'B'), (3, 'E'), (3, 'F'), (4, 'G'), (5, 'A'), (5, 'C')]```
-
-```
