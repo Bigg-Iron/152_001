@@ -22,7 +22,8 @@ def countLetters(lettersFromFile):
 def sortByCount(count):
     """Return list of tuples (value,key), sorted by value"""
     new_tuple = list(count.items())
-    return new_tuple
+    rev_tuple = [(v, k) for k, v in count.items()]
+    return rev_tuple 
         
 def main():
     """DO NOT CHANGE THIS"""
