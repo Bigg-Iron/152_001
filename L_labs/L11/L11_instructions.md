@@ -37,10 +37,15 @@ Note: Don't forget to provide a filename in the smaller input box below.
 sample.txt contains:
 
 A P P L E
+
 Example Output:
+
+```python
 Letters: ['A', 'P', 'P', 'L', 'E']
 Counted Letters: {'A': 1, 'P':2, 'L':1, 'E':1}
 Sorted: [(1,'A'), (1, 'E'), (1, 'L'), (2, 'P')]
+```
+
 Provided Files
 sample.txt
 letters1
