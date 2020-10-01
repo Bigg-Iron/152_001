@@ -23,8 +23,7 @@ def sortByCount(count):
     """Return list of tuples (value,key), sorted by value"""
     new_tuple = list(count.items())
     reversed_Tuple = [(v, k) for k, v in new_tuple]
-    # print(sorted(reversed_Tuple, key=lambda x: x[0]))
-    TTT = sorted(reversed_Tuple, key=lambda x: x[0])
+    TTT = sorted(reversed_Tuple, key=lambda x: x)
     return TTT 
         
 def main():
