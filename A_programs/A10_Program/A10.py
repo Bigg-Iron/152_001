@@ -22,7 +22,13 @@ def okrows(sudoku):
   """Returns true only if each of the rows in the sudoku is valid. 
   i.e each row contains numbers between 1-9"""
   # your code here
-  
+  for row in sudoku:
+        row.sort()
+        if row == valid:
+              continue
+        else:
+              return False
+
   return True
 
 
@@ -31,13 +37,14 @@ def okcols(sudoku):
   i.e each column contains numbers between 1-9"""
   # your code here
   
-  return True
 
+              
+  return True  
 
 def okgrid(sudoku,r,c):
   """Returns true if a 3x3 subgrid located from r,c to r+2,c+2 is valid."""
   # your code here
-  
+      
   return True
 
 

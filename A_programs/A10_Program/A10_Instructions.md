@@ -14,25 +14,24 @@ Here are the specifications for the functions you will be writing:
 You also are provided with a global variable, valid , that contains an ordered valid line. Use this to compare.
 
 get_sudoku(filename) This is provided for you
-
 Creates a 2D list containing a sudoku grid from a text file.
-okrows(sudoku)
 
+`okrows(sudoku)`
 Takes a 2D list containing a sudoku grid.
 Loop over each row in the sudoku to check if it's valid.
 Return True (boolean value, not a string) if all rows are valid, False otherwise.
-okcols(sudoku)
 
+`okcols(sudoku)`
 Takes a 2D list containing a sudoku grid.
 Loop over each column in the sudoku to check if it's valid.
 Return True (boolean value, not a string) if all columns are valid, False otherwise.
-okgrid(sudoku, r, c)
 
+`okgrid(sudoku, r, c)`
 Takes a 2D list containing a sudoku grid, a row index, and a column index.
 Check if the 3x3 grid is valid. r and c represent the upper-left most index of the grid.
 Return True (boolean value, not a string) if the 3x3 grid is valid, False otherwise.
-okgrids(sudoku)
 
+`okgrids(sudoku)`
 Takes a 2D list containing a sudoku grid.
 Checks if all nine 3x3 grids are vaild by calling okgrid.
 Return True (boolean value, not a string) if all nine 3x3 grids are valid, False otherwise.
@@ -80,14 +79,15 @@ Example Output
 The output shows whether the row, column, and grids were individually valid and whether the puzzle is solved.
 
 Sample output for grid1:
-
 [True, True, False] False
+
 Sample output for grid2:
-
 [True, True, True] True
-Sample output for grid3:
 
+Sample output for grid3:
 [False, False, False] False
+
+/Users/lorenzor.bartolo/Desktop/FALL_20/CS_151_001/A_programs/A10_Program/grid3
 Test Data
 You DO NOT need to download the text files provided for your program to run. You may download them if you wish, but zybooks can access them whether they are on your computer or not. For zybooks to access a file, you must enter its name in the smaller input box below. The following test files are available for use during your development:
 
