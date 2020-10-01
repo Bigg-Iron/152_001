@@ -2,11 +2,22 @@ def readLettersFromFile(filename):
     """ Return all characters from file in a list"""
     with open(filename, 'r+') as f:
         x = f.readlines()
-        li = list(x[0].strip('\n').split(' '))
-    return [li]
+        li = []
+        for line in x:
+            line.strip()
+            for char in line:
+                char.strip('\n')
+                if char != ' ' and char != '\n':
+                    li.append(char)
+                else:
+                   continue 
+                # print(li)
+    return li
+
 
 def countLetters(lettersFromFile):
     """Return dictionary of key:value pairs (letter,# times letter appears in file)"""
+    
     return {}
     
 def sortByCount(count):
