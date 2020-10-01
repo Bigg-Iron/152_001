@@ -17,8 +17,7 @@ def readLettersFromFile(filename):
 def countLetters(lettersFromFile):
     """Return dictionary of key:value pairs (letter,# times letter appears in file)"""
     l = lettersFromFile
-    tally = dict((x,l.count(x)) for x in set(l))
-    
+    tally = dict((x,l.count(x)) for x in sorted(set(l)))
     return tally
     
 def sortByCount(count):
