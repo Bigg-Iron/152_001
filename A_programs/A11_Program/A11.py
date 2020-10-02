@@ -20,15 +20,18 @@ def extract_words(string):
 def count_words(filename):
     """Returns a dictionary containing the number of occurrences of each word in the file."""
     # create a dictionary
-    
+    l = []
     # open the file and read the text
-    
+    with open(filename, 'r+') as f:
+        file = f.readlines()
     # extract each word in the file
-    
-    # count the number of times each word occurs.
-    
+    for line in file:
+       w = extract_words(line)
+       l.extend(w)
+    tally = dict((x,l.count(x)) for x in set(l))
     # return the dictionary with the word count.
-    return 
+    print(tally)
+    return tally
 
 
 def report_distribution(count):
