@@ -41,14 +41,18 @@ def report_distribution(count):
     new_tuple = list(count.items())
     reversed_Tuple = [(v, k) for k, v in new_tuple]
     TTT = sorted(reversed_Tuple, key=lambda x: x, reverse=True)
-    print(TTT)
+    # print(TTT)
+    s = TTT
+    print('count word\n')
+    for item in s:
+        print('{} {}'.format(item[1], item[0]))
     # add lines with the title and total word count to the output string
     
     # sort the list from largest number to smallest,
     # add a line to the output for each word in the top 20 containing count and word
     
     # return the string containing the report
-    return 
+    # return
 
 
 def main():
