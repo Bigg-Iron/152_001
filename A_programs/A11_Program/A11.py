@@ -28,9 +28,9 @@ def count_words(filename):
     for line in file:
        w = extract_words(line)
        l.extend(w)
-    tally = dict((x,l.count(x)) for x in set(l))
+    tally = dict((x,l.count(x)) for x in sorted(set(l)))
     # return the dictionary with the word count.
-    print(tally)
+    # print(tally)
     return tally
 
 
@@ -38,7 +38,10 @@ def report_distribution(count):
     """Creates a string report of the top 20 word occurrences in the dictionary."""
     # create a list containing tuples of count and word,
     # while summing the total number of word occurrences
-    
+    new_tuple = list(count.items())
+    reversed_Tuple = [(v, k) for k, v in new_tuple]
+    TTT = sorted(reversed_Tuple, key=lambda x: x, reverse=True)
+    print(TTT)
     # add lines with the title and total word count to the output string
     
     # sort the list from largest number to smallest,
