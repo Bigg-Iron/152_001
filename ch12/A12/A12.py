@@ -5,7 +5,6 @@ def palindrome(s):
     for ele in s:  
         if ele in punc:  
             s = s.replace(ele, "")
-    print(s)
     if len(s) <= 1: 
         return True
     else:
