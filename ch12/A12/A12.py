@@ -1,10 +1,9 @@
 # Is some text a palindrome?
-punc = '''!()-[]{};:'"\, <>./?@#$%^&*_~'''
+import re
+
 def palindrome(s):
     """Returns True if the string parameter contains a palindrome, False otherwise."""
-    for ele in s:  
-        if ele in punc:  
-            s = s.replace(ele, "")
+    s = re.sub('[\W_]+', '', s) 
     if len(s) <= 1: 
         return True
     else:
