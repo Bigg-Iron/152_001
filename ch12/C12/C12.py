@@ -35,21 +35,46 @@ Note: If the submitted code has an infinite loop, the system will stop running t
 '''
 
 # Returns number of pennies if pennies are doubled num_days times
-def double_pennies(num_pennies, num_days):
-    total_pennies = 0
+# def double_pennies(num_pennies, num_days):
+#     total_pennies = 0
 
-    ''' Your solution goes here '''
-    if num_days == 0:
-        total_pennies = num_pennies
+#     ''' Your solution goes here '''
+#     if num_days == 0:
+#         total_pennies = num_pennies
 
-    else:
-        total_pennies = double_pennies((num_pennies * 2), (num_days - 1))
+#     else:
+#         total_pennies = double_pennies((num_pennies * 2), (num_days - 1))
 
-    return total_pennies
+#     return total_pennies
 
-# Program computes pennies if you have 1 penny today,
-# 2 pennies after one day, 4 after two days, and so on
-starting_pennies = int(input())
-user_days = int(input())
+# # Program computes pennies if you have 1 penny today,
+# # 2 pennies after one day, 4 after two days, and so on
+# starting_pennies = int(input())
+# user_days = int(input())
 
-print('Number of pennies after', user_days, 'days: ', end="")
+# print('Number of pennies after', user_days, 'days: ', end="")
+
+''' 12.2.2: Recursive function: Writing the recursive case.
+Write code to complete factorial_str()'s recursive case.
+
+Sample output with input: 5
+5! = 5 * 4 * 3 * 2 * 1 = 120 '''
+
+def factorial_str(fact_counter, fact_value):
+    output_string = ''
+
+    if fact_counter == 0:      # Base case: 0! = 1
+        output_string += '1'
+    elif fact_counter == 1:    # Base case: print 1 and result
+        output_string += str(fact_counter) +  ' = ' + str(fact_value)
+    else:                       # Recursive case
+        output_string += str(fact_counter) + ' * '
+        next_counter = fact_counter - 1
+        next_value = next_counter * fact_value
+        output_string += factorial_str(next_counter, next_value)
+
+    return output_string
+
+user_val = int(input())
+print('{}! = '.format(user_val), end="")
+print(factorial_str(user_val, user_val))
