@@ -135,3 +135,75 @@
 #     word.append(line[code[i]])
 #     i += 1
 # print(word)
+
+# def w(s):
+#        # base cases
+#    if len(s) <= 0:
+#       return 0
+#    if s[0].isspace():
+#       return 0
+#    # recursive case
+#    return 1 + w(s[1:])
+
+# print(
+#   w('abc def 123 '), 
+#   w('\n'), 
+#   w('xyzzy'))
+
+# def f4(s):
+#       # base case
+#   if len(s) <= 0:
+#     return ''
+#   # recursive case
+#   return f4(s[2:])+s[0]
+
+# print(f4('roedcguwrastixoun'))
+
+# def f3(n, s):
+#     global delta
+#    # base case
+#     if n <= 0:
+#       return '%s!\n' % s
+#    # recursive case
+#     return '%d.' % n + f3(n - delta, s)
+
+# delta = 2
+# print(f3(5, 'blast off'))
+
+# def f2(s):
+#        # base cases
+#    if s == '':
+#       return ''
+#    if s[0] == ' ':
+#       return ''
+#    # recursive case
+#    return s[0] + f2(s[1:])
+
+# print(f2('Colorado State'), f2 ('State'))
+
+# def p(s):
+#     if len(s) == 0:
+#       return False
+#     if len(s) == 1:
+#       return True
+#     if s[0] != s[-1]:
+#       return False
+#     return p(s[1:-1])
+
+# print(
+#   p('1'), 
+#   p('Rotator'), 
+#   p('sator arepo tenet opera rotas')
+# )
+
+def q(n):
+    if n < 3:
+      return 1
+    return r(n-2, 1, 1)
+
+def r(n, x, y):
+   if n <= 1:
+      return x + y
+   return r(n - 1, x + y, x)
+
+print(q(1), q(4), q(7))
