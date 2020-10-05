@@ -60,21 +60,41 @@ Write code to complete factorial_str()'s recursive case.
 Sample output with input: 5
 5! = 5 * 4 * 3 * 2 * 1 = 120 '''
 
-def factorial_str(fact_counter, fact_value):
-    output_string = ''
+# def factorial_str(fact_counter, fact_value):
+#     output_string = ''
 
-    if fact_counter == 0:      # Base case: 0! = 1
-        output_string += '1'
-    elif fact_counter == 1:    # Base case: print 1 and result
-        output_string += str(fact_counter) +  ' = ' + str(fact_value)
-    else:                       # Recursive case
-        output_string += str(fact_counter) + ' * '
-        next_counter = fact_counter - 1
-        next_value = next_counter * fact_value
-        output_string += factorial_str(next_counter, next_value)
+#     if fact_counter == 0:      # Base case: 0! = 1
+#         output_string += '1'
+#     elif fact_counter == 1:    # Base case: print 1 and result
+#         output_string += str(fact_counter) +  ' = ' + str(fact_value)
+#     else:                       # Recursive case
+#         output_string += str(fact_counter) + ' * '
+#         next_counter = fact_counter - 1
+#         next_value = next_counter * fact_value
+#         output_string += factorial_str(next_counter, next_value)
 
-    return output_string
+#     return output_string
 
-user_val = int(input())
-print('{}! = '.format(user_val), end="")
-print(factorial_str(user_val, user_val))
+# user_val = int(input())
+# print('{}! = '.format(user_val), end="")
+# print(factorial_str(user_val, user_val))
+
+''' 12.3.1: Writing a recursive math function.
+Write code to complete raise_to_power(). Note: This example is for practicing recursion; a non-recursive function, or using the built-in function math.pow(), would be more common.
+
+Sample output with inputs: 4 2
+4^2 = 16 '''
+
+
+def raise_to_power(base_val, exponent_val):
+    if exponent_val == 0:
+      result_val = 1
+    else:
+      result_val = base_val ** exponent_val
+    return result_val
+
+user_base = int(input())
+user_exponent = int(input())
+
+print('{}^{} = {}'.format(user_base, user_exponent,
+      raise_to_power(user_base, user_exponent)))
