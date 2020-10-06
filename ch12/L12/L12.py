@@ -1,7 +1,5 @@
 import math
 
-
-
 ''' Examples:
     SEE WRITEUP ABOVE
 '''
@@ -30,9 +28,17 @@ def fib(n):
 ''' Examples:
     SEE WRITEUP ABOVE
 '''
-def exponent(n):
 
-    return -1
+def exponent(n):
+    if n < 0:
+        return 0
+    elif n == 0:
+        return 1 
+    else:
+        return exponent(n-1) * 2
+
+
+
 
 def main():
     print(factorial(-2))

@@ -85,8 +85,8 @@ fib(5) = 3 + 2
 fib(2) = 1
 fib(1) = 1
 fib(-2) = 0
-exponent(n) (calculates exponents)
 
+exponent(n) (calculates exponents)
 # Rules:
 n = 0: exponent(n) = 1
 n < 0: exponent(n) = 0
