@@ -10,9 +10,9 @@ from collections import Counter
 _Endangered = []
 _Rare = []
 _Threatened = []
+_Total = 0
 _Category = []
 _Average = 0
-_Total = 0
 
 
 
@@ -48,7 +48,11 @@ def county(contents):
 # TODO:
 # category(): Should return a dictionary containing an entry for each category containing a count of species in each NY listing
 def category():
-    pass
+
+    global _Category
+    
+    print('Category: {category}'.format(_Category))
+
     
 
 
@@ -84,7 +88,10 @@ def init(filename):
         # creating a csv reader object 
         reader = csv.DictReader(contents,dialect=csv)
         for row in reader:
-            print(row['NY Listing Status'])
+            global _Category
+            _Category.append(row['Category'])
+            print(row['Category'])
+
             if row['NY Listing Status'] == 'Threatened':
                 global _Threatened
                 _Threatened.append(row['NY Listing Status'])
@@ -96,16 +103,18 @@ def init(filename):
             elif row['NY Listing Status'] == 'Rare':
                 global _Rare
                 _Rare.append(row['NY Listing Status'])
+        
+
 
         global _Total
         _Total = len(_Threatened) + len(_Endangered) + len(_Rare)
 
-        headers = '{Endangered:>}  {Rare:>} {Threatened:>}   {Total:>} {Category:>}'
+        headers = '\n{Endangered:>}  {Rare:>} {Threatened:>}   {Total:>} {Category:>}'
 
         table = '{Endangered:>10}  {Rare:>4}  {Threatened:>9}  {Total:>6} {Category:>8}'
 
         print(headers.format(Endangered='Endangered', Rare='Rare', Threatened='Threatened', Total='Total', Category='Category'))
-        print(table.format(Endangered=len(_Endangered), Rare=len(_Rare), Threatened=len(_Threatened), Total=_Total, Category='Animal'))
+        print(table.format(Endangered=len(_Endangered), Rare=len(_Rare), Threatened=len(_Threatened), Total=_Total, Category=_Category[0]))
 
 
  
@@ -116,4 +125,5 @@ def init(filename):
 
 
 # Function calls to test
-init(filename='testdata.csv')
+# init(filename='testdata.csv')
+# category()
