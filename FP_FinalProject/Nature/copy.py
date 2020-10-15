@@ -97,11 +97,15 @@ def init(filename):
                 global _Rare
                 _Rare.append(row['NY Listing Status'])
 
-
         global _Total
         _Total = len(_Threatened) + len(_Endangered) + len(_Rare)
 
-        print('Endangered: {}  Rare: {}  Threatened: {}   Total: {}\n'.format(len(_Endangered),len(_Rare),len(_Threatened),_Total))
+        headers = '{Endangered:>}  {Rare:>} {Threatened:>}   {Total:>} {Category:>}'
+
+        table = '{Endangered:>10}  {Rare:>4}  {Threatened:>9}  {Total:>6} {Category:>8}'
+
+        print(headers.format(Endangered='Endangered', Rare='Rare', Threatened='Threatened', Total='Total', Category='Category'))
+        print(table.format(Endangered=len(_Endangered), Rare=len(_Rare), Threatened=len(_Threatened), Total=_Total, Category='Animal'))
 
 
  
