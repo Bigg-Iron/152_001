@@ -4,11 +4,22 @@ import os
 import numpy 
 import matplotlib
 import csv
+from collections import Counter
+
+
+_Endangered = []
+_Rare = []
+_Threatened = []
+_Category = []
+_Average = 0
+_Total = 0
+
 
 
 # TODO: 
 # county(): should return a dictionary containing an entry for each county containing a count of species in each NY listing
 def county(contents):
+    pass
     counties_List = []
     reader = csv.DictReader(contents)
     for row in reader:
@@ -64,42 +75,41 @@ def common():
 
 # TODO:
 # init()` - This function should parse your CSV file and read all the lines. Lines read by this function should be reused by the rest of the functions. In this way, you avoid reading the file multiple times for each of your functions.
-fields = []
-rows = []
 def init(filename):
+    
     dir_fd = os.open('/Users/lorenzor.bartolo/Desktop/FALL_20/CS_151_001/FP_FinalProject/Nature/', os.O_RDONLY)
     
     with open('/Users/lorenzor.bartolo/Desktop/FALL_20/CS_151_001/FP_FinalProject/Nature/' + filename, 'r+') as f:
         contents = f.readlines()
         # creating a csv reader object 
-        csvreader = csv.reader(contents) 
-        # extracting field names through first row 
-        fields = next(csvreader) 
-        # extracting each data row one by one 
-        for row in csvreader: 
-            rows.append(row) 
-        # get total number of rows 
-        print("Total no. of rows: {}".format(csvreader.line_num)) 
+        reader = csv.DictReader(contents,dialect=csv)
+        for row in reader:
+            print(row['NY Listing Status'])
+            if row['NY Listing Status'] == 'Threatened':
+                global _Threatened
+                _Threatened.append(row['NY Listing Status'])
 
-    # printing the field names 
-    print('\nField names are: ') 
-    print('-'*24)
-    for field in fields:
-        print('{:<}'.format(field))
-    #  printing first 5 rows 
-    print('\nDataset #1:') 
-    print('-'*24)
-    for row in rows: 
-        # parsing each column of a row 
-        for col in row: 
-            print('{:<}'.format(col)) 
-        print('-'*24) 
-        # reader = csv.reader(contents)
-        # print('opened', file=f)
+            elif row['NY Listing Status'] == 'Endangered':
+                global _Endangered
+                _Endangered.append(row['NY Listing Status'])
+                
+            elif row['NY Listing Status'] == 'Rare':
+                global _Rare
+                _Rare.append(row['NY Listing Status'])
+
+
+        global _Total
+        _Total = len(_Threatened) + len(_Endangered) + len(_Rare)
+
+        print('Endangered: {}  Rare: {}  Threatened: {}   Total: {}\n'.format(len(_Endangered),len(_Rare),len(_Threatened),_Total))
+
+
+ 
+
         os.close(dir_fd)  # don't leak a file descriptor
-        return contents 
+        return reader 
+
 
 
 # Function calls to test
-# init(filename='endangeredtest.csv')
-county(contents=init(filename='testdata.csv'))
+init(filename='testdata.csv')
