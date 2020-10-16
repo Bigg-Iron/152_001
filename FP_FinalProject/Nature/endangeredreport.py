@@ -5,5 +5,5 @@
 # TODO: status(): should take an analysis dictionary as a parameter and print the tabular report for each element in the dictionary, sorted alphabetically.
 def status(report, analysis):
     
-    print('status, report, analysis')
+    print('Triggered -> status(report, analysis) ')
 

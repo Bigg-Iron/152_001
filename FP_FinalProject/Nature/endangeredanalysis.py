@@ -7,11 +7,16 @@ import csv
 from collections import Counter
 
 
-_Endangered = []
-_Rare = []
-_Threatened = []
+ecount = 0
+_Endangered = {'Endangered':0}
+rcount=0
+_Rare = {'Rare':0}
+tcount=0
+_Threatened = {'Threatened': 0}
 _Total = 0
-_Category = []
+_Category = {}
+_Animal = {'Animal':0}
+_Plant = {'Plant': 0}
 _Average = 0
 
 
@@ -20,41 +25,15 @@ _Average = 0
 # county(): should return a dictionary containing an entry for each county containing a count of species in each NY listing
 def county(contents):
     pass
-    counties_List = []
-    reader = csv.DictReader(contents)
-    for row in reader:
-        print('-' * 30)
-        print(reader.line_num)
-        print('Category: {category}'.format(category=row['Category']))
-        print('County: {county}'.format(county=row['County']))
-        print('Taxonomic Group: {taxonomicGrp}'.format(taxonomicGrp=row['Taxonomic Group']))
-        print('Taxonomic Subgroup: {taxonomicSub}'.format(taxonomicSub=row['Taxonomic Subgroup']))
-        print('Scientific Name: {scientificName}'.format(scientificName=row['Scientific Name']))
-        print('Common Name: {commonName}'.format(commonName=row['Common Name']))
-        
-        counties_List.append(row)
-
-        # print('Category: {category}'.format(category=row['Category']))
-        # print('Year Last Documented: {}'.format(row['Year Last Documented']))
-        # print('NY Listing Status: {}'.format(row['NY Listing Status']))
-        # print('Federal Listing Status: {}'.format(row['Federal Listing Status']))
-        # print('State Conservation Rank: {}'.format(row['State Conservation Rank']))
-        # print('Global Conservation Rank: {}'.format(row['Global Conservation Rank']))
-        # print('Distribution Status: {}'.format(row['Distribution Status']))
-    # cl = sorted(counties_List,key=len)
-    print(dict(counties_List))
+    
 
 
 # TODO:
 # category(): Should return a dictionary containing an entry for each category containing a count of species in each NY listing
 def category():
-
-    global _Category
-    
-    print('Category: {category}'.format(category=_Category))
+    pass 
 
     
-
 
 
 # TODO:
@@ -88,34 +67,38 @@ def init(filename):
         # creating a csv reader object 
         reader = csv.DictReader(contents,dialect=csv)
         for row in reader:
-            global _Category
-            _Category.append(row['Category'])
-            print(row['Category'])
-
             if row['NY Listing Status'] == 'Threatened':
+                global tcount
+                tcount+=1
                 global _Threatened
-                _Threatened.append(row['NY Listing Status'])
+                _Threatened.update({'Threatened' : tcount})
 
             elif row['NY Listing Status'] == 'Endangered':
+                global ecount
+                ecount+=1
                 global _Endangered
-                _Endangered.append(row['NY Listing Status'])
+                _Endangered.update({'Endangered': ecount})
                 
             elif row['NY Listing Status'] == 'Rare':
+                global rcount
+                rcount+=1
                 global _Rare
-                _Rare.append(row['NY Listing Status'])
+                _Rare.update({'Rare': rcount})
         
 
 
         global _Total
-        _Total = len(_Threatened) + len(_Endangered) + len(_Rare)
+        _Total = _Endangered.get('Endangered') + _Rare.get('Rare') + _Threatened.get('Threatened')
 
-        headers = '\n{Endangered:>}  {Rare:>} {Threatened:>}   {Total:>} {Category:>}'
+        headers = '\n{Endangered:>}  {Rare:>} {Threatened:>}   {Total:>} {Report:>}'
 
-        table = '{Endangered:>10}  {Rare:>4}  {Threatened:>9}  {Total:>6} {Category:>8}'
+        table = '{Endangered:>10}  {Rare:>4}  {Threatened:>9}  {Total:>6} {Report:>8}'
 
-        print(headers.format(Endangered='Endangered', Rare='Rare', Threatened='Threatened', Total='Total', Category='Category'))
-        print(table.format(Endangered=len(_Endangered), Rare=len(_Rare), Threatened=len(_Threatened), Total=_Total, Category=_Category[0]))
+        print(headers.format(Endangered='Endangered', Rare='Rare', Threatened='Threatened', Total='Total', Report='Category'))
 
+        print(table.format(Endangered=_Endangered.get('Endangered'), Rare=_Rare.get('Rare'), Threatened=_Threatened.get('Threatened'), Total=_Total, Report='Animal'))
+
+        # print(table.format(Endangered=len(_Endangered), Rare=len(_Rare), Threatened=len(_Threatened), Total=_Total, Category=_Category))
 
  
 
@@ -125,5 +108,5 @@ def init(filename):
 
 
 # Function calls to test
-# init(filename='testdata.csv')
+init(filename='testdata.csv')
 # category()
