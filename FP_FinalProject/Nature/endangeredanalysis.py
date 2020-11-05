@@ -1,10 +1,13 @@
 import math
-import pandas
+import pandas as pd
 import os
 import numpy 
 import matplotlib
 import csv
 from collections import Counter
+
+
+df = pd.read_csv('/Users/lorenzor.bartolo/Desktop/FALL_20/CS_151_001/FP_FinalProject/Nature/testdata.csv')
 
 
 ecount = 0
@@ -23,7 +26,7 @@ _Average = 0
 
 # TODO: 
 # county(): should return a dictionary containing an entry for each county containing a count of species in each NY listing
-def county(contents):
+def county():
     pass
     
 
@@ -31,7 +34,10 @@ def county(contents):
 # TODO:
 # category(): Should return a dictionary containing an entry for each category containing a count of species in each NY listing
 def category():
-    pass 
+
+    category = df['Category']
+    categoryStats = df[['NY Listing Status','Category']].value_counts()
+    print(categoryStats)  
 
     
 
@@ -39,7 +45,12 @@ def category():
 # TODO:
 # group(): Should return a dictionary containing an entry for each Taxonomic Group containing a count of species in each NY Listing
 def group():
-    pass
+
+    groupStats = df[['Taxonomic Group', 'NY Listing Status']].value_counts()
+    group = 'Taxonomic Group'
+    
+    return group
+    
 
 
 # TODO:
@@ -94,9 +105,9 @@ def init(filename):
 
         table = '{Endangered:>10}  {Rare:>4}  {Threatened:>9}  {Total:>6} {Report:>8}'
 
-        print(headers.format(Endangered='Endangered', Rare='Rare', Threatened='Threatened', Total='Total', Report='Category'))
+        # print(headers.format(Endangered='Endangered', Rare='Rare', Threatened='Threatened', Total='Total', Report='Category'))
 
-        print(table.format(Endangered=_Endangered.get('Endangered'), Rare=_Rare.get('Rare'), Threatened=_Threatened.get('Threatened'), Total=_Total, Report='Animal'))
+        # print(table.format(Endangered=_Endangered.get('Endangered'), Rare=_Rare.get('Rare'), Threatened=_Threatened.get('Threatened'), Total=_Total, Report='Animal'))
 
         # print(table.format(Endangered=len(_Endangered), Rare=len(_Rare), Threatened=len(_Threatened), Total=_Total, Category=_Category))
 
